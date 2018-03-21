@@ -16,12 +16,33 @@ const getOpeningScroll = async () => {
     title: data.title,
     date: data.release_date
   })
+}
 
+const getPeople = async () => {
+  const url = `https://swapi.co/api/people/`
+  const initialFetch = await fetch(url)
+  const response = await initialFetch.json()
+  
+  const data = response.results.reduce((dataObj, person) => {
+    dataObj[person.name] = person.name
+    return dataObj
+  }, {})
+
+  return data
 }
 
 
+
+// Name xx
+// Homeworld
+// Species
+// Population of Homeworld
+// A button to “Favorite” the person
+
+
 export {
-  getOpeningScroll
+  getOpeningScroll,
+  getPeople
 }
 
 
