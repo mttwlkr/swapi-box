@@ -11,22 +11,21 @@ class App extends Component {
     this.state = {
       scroll: {},
     }
-    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick = (e) => {
     switch (e.target.name) {
       case 'vehicles': console.log('vehicles')
       break;
-      case 'people': this.getPeople()
+      case 'people': this.handlePeople()
       break;
       case 'planets': console.log('planets')
     }
   }
 
-  async getPeople() {
+  handlePeople = async() => {
     const response = await getPeople()
-    console.log(response)
+    console.log("we made it", response)
   }
 
   async componentDidMount() {
