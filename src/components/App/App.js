@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav.js';
 import Main from '../Main/Main.js';
 import Header from '../Header/Header.js'
-import {getOpeningScroll, getPeople} from '../../cleaners/cleaner.js'
+import {getAPI} from '../../cleaners/cleaner.js'
 import './App.css';
 
 class App extends Component {
@@ -24,12 +24,13 @@ class App extends Component {
   }
 
   handlePeople = async() => {
-    const response = await getPeople()
+    // const response = await getPeople()
+    const response = await getAPI('people')
     console.log("we made it", response)
   }
 
   async componentDidMount() {
-    const response = await getOpeningScroll()
+    const response = await getAPI('films')
     this.setState({scroll: response})
   }
 
