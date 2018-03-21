@@ -2,45 +2,31 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav.js';
 import Main from '../Main/Main.js';
 import Header from '../Header/Header.js'
-// import fetchData from '../../cleaners/fetchData.js'
+import {getOpeningScroll} from '../../cleaners/cleaner.js'
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      scroll: '',
-      films: '',
-      people: '',
-      vehicles: '',
-      planets: '',
-      error: false
+      scroll: {},
     }
-    this.getMovie = this.getMovie.bind(this)
   }
 
-  getMovie() {
-    fetch('https://swapi.co/api/films')
-      .then(response => response.json())
-      .then(data => {
-        if(data.results) {
-          this.setState({ scroll: data.results[Math.floor((Math.random() * 7) + 1)].opening_crawl })
-        } else {
-          throw Error("Error 404")
-        }
-      })
-    .catch(error => this.setState({error: true}))
+  handleClick = () => {
+    // console.log('sup')
   }
 
-  componentDidMount() {
-    this.getMovie()
+  async componentDidMount() {
+    const response = await getOpeningScroll()
+    this.setState({scroll: response})
   }
 
   render() {
     return (
       <div className="App">
         <Header />
-        <Nav />
+        <Nav handleClick={this.handleClick}/>
         <Main scroll={this.state.scroll}/>
       </div>
     );
