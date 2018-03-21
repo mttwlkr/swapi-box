@@ -2,21 +2,20 @@ import React from 'react'
 import Button from '../Button/Button.js'
 import './Nav.css'
 
-const Nav = ({handleClick}) => {
-
+const Nav = (props) => {
   return (
     <div>
       <Button 
         name='people'
-        onClick={handleClick}
+        controlFunction={props.controlFunction}
       />
       <Button 
         name='planets'
-        onClick={handleClick}
+        controlFunction={props.controlFunction}
       />
       <Button 
         name='vehicles'
-        onClick={handleClick}
+        controlFunction={props.controlFunction}
       />
     </div>
   )

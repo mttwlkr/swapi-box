@@ -2,26 +2,72 @@
 //   const url = `https://swapi.co/api/${type}/`
 //   const initialFetch = await fetch(url)
 //   const response = await initialFetch.json()
-//   return response
+
+//   switch (type) {
+//     case 'films': console.log('films')
+//     break;
+//     case 'people': console.log('people')
+//     break;
+//     case 'planets': console.log('planets')
+//     break;
+//     case 'vehicles': console.log('vehicles')
+//     //default
+//   }
 // }
 
 const getOpeningScroll = async () => {
-  let randomNumber = Math.floor((Math.random() * 7) + 1)
   const url = `https://swapi.co/api/films/`
-  const initialFetch = await fetch(url)
-  const response = await initialFetch.json()
-  const data = response.results[randomNumber]
-  return ({
-    scroll: data.opening_crawl,
-    title: data.title,
-    date: data.release_date
-  })
+  const response = await fetch(url)
+  const data = await response.json()
 
+  let randomNumber = Math.floor((Math.random() * 7) + 1)
+  const film = data.results[randomNumber]
+  return ({
+    scroll: film.opening_crawl,
+    title: film.title,
+    date: film.release_date
+  })
+}
+
+const getPeople = async () => {
+  const url = `https://swapi.co/api/people/`
+  const response = await fetch(url)
+  const data = await response.json()
+
+  const promises = data.results.map(async(person) => {
+    const personName = person.name
+    const homeworld = await getHomeWorld(person.homeworld)
+    const species = await getSpecies(person.species)
+    return {personName, ...homeworld, species}
+  })
+  return await Promise.all(promises)
+}
+
+const getHomeWorld = async (homeworld) => {
+  const response = await fetch(homeworld)
+  const data = await response.json()
+  const homeworldObj = ({name: data.name, population: data.population})
+  return Promise.resolve(homeworldObj)
+}
+
+const getSpecies = async (species) => {
+  const response = await fetch(species)
+  const data = await response.json()
+  return Promise.resolve(data.name)
 }
 
 
+
+// Name xx
+// Homeworld
+// Species
+// Population of Homeworld
+// A button to “Favorite” the person
+
+
 export {
-  getOpeningScroll
+  getOpeningScroll,
+  getPeople
 }
 
 

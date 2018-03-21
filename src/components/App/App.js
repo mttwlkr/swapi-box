@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav.js';
 import Main from '../Main/Main.js';
 import Header from '../Header/Header.js'
-import {getOpeningScroll} from '../../cleaners/cleaner.js'
+import {getOpeningScroll, getPeople} from '../../cleaners/cleaner.js'
 import './App.css';
 
 class App extends Component {
@@ -13,8 +13,19 @@ class App extends Component {
     }
   }
 
-  handleClick = () => {
-    // console.log('sup')
+  handleClick = (e) => {
+    switch (e.target.name) {
+      case 'vehicles': console.log('vehicles')
+      break;
+      case 'people': this.handlePeople()
+      break;
+      case 'planets': console.log('planets')
+    }
+  }
+
+  handlePeople = async() => {
+    const response = await getPeople()
+    console.log("we made it", response)
   }
 
   async componentDidMount() {
@@ -26,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Nav handleClick={this.handleClick}/>
+        <Nav controlFunction={this.handleClick}/>
         <Main scroll={this.state.scroll}/>
       </div>
     );

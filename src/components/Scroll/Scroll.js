@@ -5,9 +5,9 @@ const Scroll = (props) => {
   const {title, scroll, date} = props.scroll
   return (
     <div>
-      {title}
-      {date}
-      {scroll}
+      <h1>{title}</h1>
+      <h2>{date}</h2>
+      <p>{scroll}</p>
     </div>
   )
 }
