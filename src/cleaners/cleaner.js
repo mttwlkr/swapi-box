@@ -1,7 +1,6 @@
 const getAPI = async (type) => {
   const url = `https://swapi.co/api/${type}/`
-  const response = await fetch(url)
-  const data = await response.json()
+  const data = await parseFunc(url)
   let answer;
 
   switch (type) {
@@ -16,8 +15,13 @@ const getAPI = async (type) => {
   return answer
 }
 
-const getOpeningScroll = async (data) => {
+const parseFunc = async (url) => {
+  const response = await fetch(url)
+  const data = await response.json()
+  return data
+}
 
+const getOpeningScroll = async (data) => {
   let randomNumber = Math.floor((Math.random() * 7) + 1)
   const film = data.results[randomNumber]
   return ({
@@ -39,15 +43,13 @@ const getPeople = async (data) => {
 }
 
 const getHomeWorld = async (homeworld) => {
-  const response = await fetch(homeworld)
-  const data = await response.json()
+  const data = await parseFunc(homeworld)
   const homeworldObj = ({planetName: data.name, population: data.population})
   return Promise.resolve(homeworldObj)
 }
 
 const getSpecies = async (species) => {
-  const response = await fetch(species)
-  const data = await response.json()
+  const data = await parseFunc(species)
   return Promise.resolve(data.name)
 }
 

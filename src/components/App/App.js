@@ -24,7 +24,6 @@ class App extends Component {
   }
 
   handlePeople = async() => {
-    // const response = await getPeople()
     const response = await getAPI('people')
     console.log("we made it", response)
   }
