@@ -21,10 +21,14 @@ class App extends Component {
       case 'people': this.handlePeople()
       break;
       case 'planets': console.log('planets')
+      break;
+      case 'favorites-card': console.log('favorites-card')
+      break;
+      case 'favorites-nav': console.log('favorites-nav')
     }
   }
 
-  handlePeople = async() => {
+  handlePeople = async () => {
     const response = await getAPI('people')
     this.setState({people: response})
   }
@@ -37,9 +41,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Nav controlFunction={this.handleClick}/>
-        <Main scroll={this.state.scroll} people={this.state.people}/>
+        <Header 
+          controlFunction={this.handleClick}
+        />
+        <Nav 
+          controlFunction={this.handleClick}
+        />
+        <Main 
+          scroll={this.state.scroll} 
+          people={this.state.people}
+          controlFunction={this.handleClick}
+        />
       </div>
     );
   }

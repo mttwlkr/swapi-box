@@ -3,13 +3,13 @@ import Scroll from '../Scroll/Scroll.js'
 import CardContainer from '../CardContainer/CardContainer.js'
 import './Main.css'
 
-const Main = ({scroll, people}) => {
+const Main = ({scroll, people, controlFunction}) => {
   return (
     <div>
       <div className="scroll-div">
       {!people && <Scroll scroll={scroll}/>}
       </div>
-      {people && <CardContainer people={people}/>}
+      {people && <CardContainer people={people} controlFunction={controlFunction}/>}
     </div>
   )
 }
