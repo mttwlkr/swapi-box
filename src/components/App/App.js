@@ -17,7 +17,7 @@ class App extends Component {
 
   handleClick = (e) => {
     switch (e.target.name) {
-      case 'vehicles': console.log('vehicles')
+      case 'vehicles': this.handleVehicles()
       break;
       case 'people': this.handlePeople()
       break;
@@ -28,6 +28,15 @@ class App extends Component {
       case 'favorites-nav': console.log('favorites-nav')
     }
   }
+
+  handleVehicles = async () => {
+    const response = await getAPI('vehicles')
+    console.log(response)
+  }
+
+
+
+
 
   handlePlanets = async () => {
     const response = await getAPI('planets')

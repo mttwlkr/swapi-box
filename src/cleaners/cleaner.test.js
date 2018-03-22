@@ -1,4 +1,4 @@
-import {getAPI, parseFunc, getOpeningScroll, getPeople, getHomeWorld, getSpecies} from './cleaner.js'
+import {getAPI, parseFunc, cleanOpeningScroll, cleanPeople, getHomeWorld, getSpecies} from './cleaner.js'
 import {mockDirtyFilmData} from './cleaner.js'
 
 describe('cleaner', () => {
@@ -7,14 +7,14 @@ describe('cleaner', () => {
     
     it.skip('should decide which method to fire based on arguments', () => {
       const url = `https://swapi.co/api/films/`
-      const expected = getOpeningScroll(data)
+      const expected = cleanOpeningScroll(data)
 
       window.fetch = jest.fn().mockImplementation((url) => ({
         status: 200,
         json: () => new Promise.resolve()
       }))
   
-      expect(getOpeningScroll).toHaveBeenCalled()
+      expect(cleanOpeningScroll).toHaveBeenCalled()
     })
   })
   

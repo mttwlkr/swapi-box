@@ -4,13 +4,13 @@ const getAPI = async (type) => {
   let answer;
 
   switch (type) {
-    case 'films': answer = getOpeningScroll(data)
+    case 'films': answer = cleanOpeningScroll(data)
     break;
-    case 'people': answer = getPeople(data)
+    case 'people': answer = cleanPeople(data)
     break;
-    case 'planets': answer = getPlanets(data)
+    case 'planets': answer = cleanPlanets(data)
     break;
-    case 'vehicles': console.log('vehicles')
+    case 'vehicles': answer = cleanVehicles(data)
   }
   return answer
 }
@@ -25,7 +25,7 @@ const parseFunc = async (url) => {
   }
 }
 
-const getOpeningScroll = async (data) => {
+const cleanOpeningScroll = async (data) => {
   let randomNumber = Math.floor((Math.random() * 7) + 1)
   const film = data.results[randomNumber]
   return ({
@@ -35,7 +35,7 @@ const getOpeningScroll = async (data) => {
   })
 }
 
-const getPeople = async (data) => {
+const cleanPeople = async (data) => {
   const promises = data.results.map(async(person) => {
     const personName = person.name
     const homeworld = await getHomeWorld(person.homeworld)
@@ -56,7 +56,7 @@ const getSpecies = async (species) => {
   return Promise.resolve(data.name)
 }
 
-const getPlanets = async (data) => {
+const cleanPlanets = async (data) => {
   const promises = data.results.map(async(planet) => {
     const {name, terrain, population, climate} = planet
     const residents = await getResidents(planet.residents)
@@ -71,13 +71,21 @@ const getResidents = (residentsAPIs) => {
     return resident.name
   })
   return Promise.all(allResidents)
+} 
+
+const cleanVehicles = async (data) => {
+  const promises = data.results.map(async(vehicle) => {
+    const {name, model, passengers, vehicle_class} = vehicle
+    return ({name, model, passengers, vehicle_class})
+  })
+  return Promise.all(promises)
 }
 
 export {
   getAPI,
   parseFunc,
-  getOpeningScroll,
-  getPeople,
+  cleanOpeningScroll,
+  cleanPeople,
   getHomeWorld,
   getSpecies
 }
