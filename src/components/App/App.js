@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       scroll: {},
       people: '',
-      planets: {}
+      planets: {},
+      vehicles: {}
     }
   }
 
@@ -31,12 +32,8 @@ class App extends Component {
 
   handleVehicles = async () => {
     const response = await getAPI('vehicles')
-    console.log(response)
+    this.setState({vehicles: response})
   }
-
-
-
-
 
   handlePlanets = async () => {
     const response = await getAPI('planets')
