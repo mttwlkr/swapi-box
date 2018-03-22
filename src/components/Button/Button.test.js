@@ -12,4 +12,11 @@ describe('Button', () => {
     let wrapper = shallow(<Button />)
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should run the props controlFunction on click', () => {
+    const controlFunction = jest.fn()
+    let wrapper = shallow(<Button controlFunction={controlFunction}/>)
+    wrapper.simulate('click')
+    expect(controlFunction).toHaveBeenCalled()
+  })
 })

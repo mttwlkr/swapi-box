@@ -10,23 +10,39 @@ class App extends Component {
     super(props)
     this.state = {
       scroll: {},
+      people: '',
+      planets: {},
+      vehicles: {}
     }
   }
 
   handleClick = (e) => {
     switch (e.target.name) {
-      case 'vehicles': console.log('vehicles')
+      case 'vehicles': this.handleVehicles()
       break;
       case 'people': this.handlePeople()
       break;
-      case 'planets': console.log('planets')
+      case 'planets': this.handlePlanets()
+      break;
+      case 'favorites-card': console.log('favorites-card')
+      break;
+      case 'favorites-nav': console.log('favorites-nav')
     }
   }
 
-  handlePeople = async() => {
-    // const response = await getPeople()
+  handleVehicles = async () => {
+    const response = await getAPI('vehicles')
+    this.setState({vehicles: response})
+  }
+
+  handlePlanets = async () => {
+    const response = await getAPI('planets')
+    this.setState({planets: response})
+  }
+
+  handlePeople = async () => {
     const response = await getAPI('people')
-    console.log("we made it", response)
+    this.setState({people: response})
   }
 
   async componentDidMount() {
@@ -37,9 +53,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Nav controlFunction={this.handleClick}/>
-        <Main scroll={this.state.scroll}/>
+        <Header 
+          controlFunction={this.handleClick}
+        />
+        <Nav 
+          controlFunction={this.handleClick}
+        />
+        <Main 
+          scroll={this.state.scroll} 
+          people={this.state.people}
+          controlFunction={this.handleClick}
+        />
       </div>
     );
   }

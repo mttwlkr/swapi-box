@@ -1,0 +1,14 @@
+.card {
+  border: 1px solid chartreuse;
+  width: 250px;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.card-info {
+  color: magenta;
+}
+
+.card-favorite-button {
+  color: blue;
+}
