@@ -4,7 +4,7 @@ import App from './App.js';
 
 describe('App', () => {
 
-  it('should render without crashing', () => {
+  it.skip('should render without crashing', () => {
     shallow(<App />)  
   })
 

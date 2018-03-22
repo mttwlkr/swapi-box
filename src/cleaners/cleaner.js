@@ -16,9 +16,13 @@ const getAPI = async (type) => {
 }
 
 const parseFunc = async (url) => {
-  const response = await fetch(url)
-  const data = await response.json()
-  return data
+  try {
+    const response = await fetch(url)
+    let data = await response.json()
+    return data
+  } catch (error) {
+    throw (new Error ('Was not able to get data'))
+  }
 }
 
 const getOpeningScroll = async (data) => {
@@ -32,7 +36,6 @@ const getOpeningScroll = async (data) => {
 }
 
 const getPeople = async (data) => {
-
   const promises = data.results.map(async(person) => {
     const personName = person.name
     const homeworld = await getHomeWorld(person.homeworld)
@@ -54,6 +57,11 @@ const getSpecies = async (species) => {
 }
 
 export {
-  getAPI
+  getAPI,
+  parseFunc,
+  getOpeningScroll,
+  getPeople,
+  getHomeWorld,
+  getSpecies
 }
 
