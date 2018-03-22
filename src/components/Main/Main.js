@@ -3,7 +3,8 @@ import Scroll from '../Scroll/Scroll.js'
 import CardContainer from '../CardContainer/CardContainer.js'
 import './Main.css'
 
-const Main = ({scroll, people, controlFunction}) => {
+const Main = ({scroll, people, planets, vehicles, controlFunction}) => {
+  console.log(vehicles)
   return (
     <div>
       <div className="scroll-div">

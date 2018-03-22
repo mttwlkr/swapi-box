@@ -62,6 +62,8 @@ class App extends Component {
         <Main 
           scroll={this.state.scroll} 
           people={this.state.people}
+          planets={this.state.planets}
+          vehicles={this.state.vehicles}
           controlFunction={this.handleClick}
         />
       </div>
