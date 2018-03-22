@@ -10,7 +10,8 @@ class App extends Component {
     super(props)
     this.state = {
       scroll: {},
-      people: ''
+      people: '',
+      planets: {}
     }
   }
 
@@ -20,12 +21,17 @@ class App extends Component {
       break;
       case 'people': this.handlePeople()
       break;
-      case 'planets': console.log('planets')
+      case 'planets': this.handlePlanets()
       break;
       case 'favorites-card': console.log('favorites-card')
       break;
       case 'favorites-nav': console.log('favorites-nav')
     }
+  }
+
+  handlePlanets = async () => {
+    const response = await getAPI('planets')
+    this.setState({planets: response})
   }
 
   handlePeople = async () => {

@@ -8,7 +8,7 @@ const getAPI = async (type) => {
     break;
     case 'people': answer = getPeople(data)
     break;
-    case 'planets': console.log('planets')
+    case 'planets': answer = getPlanets(data)
     break;
     case 'vehicles': console.log('vehicles')
   }
@@ -54,6 +54,23 @@ const getHomeWorld = async (homeworld) => {
 const getSpecies = async (species) => {
   const data = await parseFunc(species)
   return Promise.resolve(data.name)
+}
+
+const getPlanets = async (data) => {
+  const promises = data.results.map(async(planet) => {
+    const {name, terrain, population, climate} = planet
+    const residents = await getResidents(planet.residents)
+    return ({name, terrain, population, climate, residents})
+  })
+  return Promise.all(promises)
+}
+
+const getResidents = (residentsAPIs) => {
+  const allResidents = residentsAPIs.map(async(residentAPI) => {
+    const resident = await parseFunc(residentAPI)
+    return resident.name
+  })
+  return Promise.all(allResidents)
 }
 
 export {
