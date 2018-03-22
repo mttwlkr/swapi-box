@@ -4,7 +4,7 @@ import './Nav.css'
 
 const Nav = (props) => {
   return (
-    <div>
+    <nav className='button-nav'>
       <Button 
         name='people'
         controlFunction={props.controlFunction}
@@ -17,7 +17,7 @@ const Nav = (props) => {
         name='vehicles'
         controlFunction={props.controlFunction}
       />
-    </div>
+    </nav>
   )
 }
 

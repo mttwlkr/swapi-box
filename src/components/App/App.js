@@ -10,6 +10,7 @@ class App extends Component {
     super(props)
     this.state = {
       scroll: {},
+      people: ''
     }
   }
 
@@ -25,7 +26,7 @@ class App extends Component {
 
   handlePeople = async() => {
     const response = await getAPI('people')
-    console.log("we made it", response)
+    this.setState({people: response})
   }
 
   async componentDidMount() {
@@ -38,7 +39,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Nav controlFunction={this.handleClick}/>
-        <Main scroll={this.state.scroll}/>
+        <Main scroll={this.state.scroll} people={this.state.people}/>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import './Button.css'
 const Button = ({name, controlFunction}) => {
   return (
     <button 
-      className={"button" + name}
+      className={"button " + name}
       name={name}
       onClick={controlFunction}
     >{name}</button>
