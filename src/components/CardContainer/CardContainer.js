@@ -2,9 +2,10 @@ import React from 'react'
 import './CardContainer.css'
 import Card from '../Card/Card.js'
 
-const CardContainer = ({people, controlFunction}) => {
-  const newCards = people.map((unit, idx) => {
-    return <Card unit={unit} controlFunction={controlFunction} key={idx}/>
+const CardContainer = ({info, controlFunction}) => {
+
+  const newCards = info.map((card, idx) => {
+    return <Card card={card} controlFunction={controlFunction} key={idx}/>
   })
   
   return (

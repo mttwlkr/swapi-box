@@ -37,10 +37,10 @@ const cleanOpeningScroll = async (data) => {
 
 const cleanPeople = async (data) => {
   const promises = data.results.map(async(person) => {
-    const personName = person.name
+    const name = person.name
     const homeworld = await getHomeWorld(person.homeworld)
     const species = await getSpecies(person.species)
-    return {personName, ...homeworld, species}
+    return {name, ...homeworld, species}
   })
   return await Promise.all(promises)
 }

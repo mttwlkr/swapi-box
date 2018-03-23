@@ -9,10 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      scroll: {},
-      people: '',
-      planets: {},
-      vehicles: {}
+      scroll: '',
+      info: [],
     }
   }
 
@@ -32,17 +30,17 @@ class App extends Component {
 
   handleVehicles = async () => {
     const response = await getAPI('vehicles')
-    this.setState({vehicles: response})
+    this.setState({info: response})
   }
 
   handlePlanets = async () => {
     const response = await getAPI('planets')
-    this.setState({planets: response})
+    this.setState({info: response})
   }
 
   handlePeople = async () => {
     const response = await getAPI('people')
-    this.setState({people: response})
+    this.setState({info: response})
   }
 
   async componentDidMount() {
@@ -61,9 +59,10 @@ class App extends Component {
         />
         <Main 
           scroll={this.state.scroll} 
-          people={this.state.people}
-          planets={this.state.planets}
-          vehicles={this.state.vehicles}
+          info={this.state.info}
+          // people={this.state.people}
+          // planets={this.state.planets}
+          // vehicles={this.state.vehicles}
           controlFunction={this.handleClick}
         />
       </div>
@@ -73,3 +72,4 @@ class App extends Component {
 
 export default App;
 
+//return <li{`className=${element}`}>{element: element}</li>
