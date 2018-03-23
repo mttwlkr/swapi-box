@@ -71,5 +71,3 @@ class App extends Component {
 }
 
 export default App;
-
-//return <li{`className=${element}`}>{element: element}</li>
