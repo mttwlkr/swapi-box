@@ -17,11 +17,11 @@ class App extends Component {
 
   handleClick = (e) => {
     switch (e.target.name) {
-      case 'vehicles': this.handleVehicles()
+      case 'vehicles': this.handleFetch('vehicles')
       break;
-      case 'people': this.handlePeople()
+      case 'people': this.handleFetch('people')
       break;
-      case 'planets': this.handlePlanets()
+      case 'planets': this.handleFetch('planets')
       break;
     }
   }
@@ -46,18 +46,8 @@ class App extends Component {
     }   
   }
 
-  handleVehicles = async () => {
-    const response = await getAPI('vehicles')
-    this.setState({info: response})
-  }
-
-  handlePlanets = async () => {
-    const response = await getAPI('planets')
-    this.setState({info: response})
-  }
-
-  handlePeople = async () => {
-    const response = await getAPI('people')
+  handleFetch = async (type) => {
+    const response = await getAPI(type)
     this.setState({info: response})
   }
 
