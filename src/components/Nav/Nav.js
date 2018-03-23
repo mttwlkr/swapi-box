@@ -1,22 +1,27 @@
 import React from 'react'
-import Button from '../Button/Button.js'
 import './Nav.css'
 
 const Nav = (props) => {
   return (
     <nav className='button-nav'>
-      <Button 
+      <button
+        className='nav-button people-button'
         name='people'
-        controlFunction={props.controlFunction}
-      />
-      <Button 
+        onClick={props.controlFunction}>
+        People
+      </button>
+      <button
+        className='nav-button planets-button'
         name='planets'
-        controlFunction={props.controlFunction}
-      />
-      <Button 
+        onClick={props.controlFunction}>
+        Planets
+      </button>      
+      <button
+        className='nav-button vehicles-button'
         name='vehicles'
-        controlFunction={props.controlFunction}
-      />
+        onClick={props.controlFunction}>
+        Vehicles
+      </button>
     </nav>
   )
 }
