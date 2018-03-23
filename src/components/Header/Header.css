@@ -3,3 +3,7 @@
   background-color: grey;
   color: coral;
 }
+
+.favorites-button-div {
+  border: 1px solid chartreuse;
+}

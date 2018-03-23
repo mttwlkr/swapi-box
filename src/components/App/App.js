@@ -26,9 +26,15 @@ class App extends Component {
     }
   }
 
-  handleNewFavorite = (card) => {
-    const newFavorites = [...this.state.favorites, card]
-    this.setState({favorites: newFavorites})
+  showFavorites = () => {
+    let currentFavorites = this.state.favorites
+    this.setState({info: currentFavorites})
+  }
+
+  handleFavorite = (card) => {
+    const newFavorites = this.state.favorites.filter(fav => fav.name !== card.name)
+    const newState = [...newFavorites, card]
+    this.setState({favorites: newState})     
   }
 
   handleVehicles = async () => {
@@ -55,15 +61,16 @@ class App extends Component {
     return (
       <div className="App">
         <Header 
-          controlFunction={this.handleClick}
+          controlFunction={this.showFavorites}
+          value={this.state.favorites}
         />
         <Nav 
           controlFunction={this.handleClick}
         />
-        <Main 
+        <Main
           scroll={this.state.scroll} 
           info={this.state.info}
-          controlFunction={this.handleNewFavorite}
+          controlFunction={this.handleFavorite}
         />
       </div>
     );
