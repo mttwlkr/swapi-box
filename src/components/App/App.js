@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       scroll: '',
       info: [],
-      favorites: [],
+      favorites: []
     }
   }
 
@@ -27,14 +27,23 @@ class App extends Component {
   }
 
   showFavorites = () => {
+    if (this.state.favorites.length === 0) {
+      alert('Please choose some favorites first!')
+    }
     let currentFavorites = this.state.favorites
     this.setState({info: currentFavorites})
   }
 
   handleFavorite = (card) => {
-    const newFavorites = this.state.favorites.filter(fav => fav.name !== card.name)
-    const newState = [...newFavorites, card]
-    this.setState({favorites: newState})     
+    const names = this.state.favorites.map(fav => fav.name)
+    const idx = names.indexOf(card.name)
+    if (this.state.favorites.length > 0 && idx !== -1 ) {
+      const newState = this.state.favorites.filter(fav => fav.name !== card.name)
+      this.setState({favorites: newState})
+    } else {
+      const newState = [...this.state.favorites, card]
+      this.setState({favorites: newState})      
+    }   
   }
 
   handleVehicles = async () => {
