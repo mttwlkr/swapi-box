@@ -11,38 +11,43 @@ class App extends Component {
     this.state = {
       scroll: '',
       info: [],
-      favorites: [],
+      favorites: []
     }
   }
 
   handleClick = (e) => {
     switch (e.target.name) {
-      case 'vehicles': this.handleVehicles()
+      case 'vehicles': this.handleFetch('vehicles')
       break;
-      case 'people': this.handlePeople()
+      case 'people': this.handleFetch('people')
       break;
-      case 'planets': this.handlePlanets()
+      case 'planets': this.handleFetch('planets')
       break;
     }
   }
 
-  handleNewFavorite = (card) => {
-    const newFavorites = [...this.state.favorites, card]
-    this.setState({favorites: newFavorites})
+  showFavorites = () => {
+    if (this.state.favorites.length === 0) {
+      alert('Please choose some favorites first!')
+    }
+    let currentFavorites = this.state.favorites
+    this.setState({info: currentFavorites})
   }
 
-  handleVehicles = async () => {
-    const response = await getAPI('vehicles')
-    this.setState({info: response})
+  handleFavorite = (card) => {
+    const names = this.state.favorites.map(fav => fav.name)
+    const idx = names.indexOf(card.name)
+    if (this.state.favorites.length > 0 && idx !== -1 ) {
+      const newState = this.state.favorites.filter(fav => fav.name !== card.name)
+      this.setState({favorites: newState})
+    } else {
+      const newState = [...this.state.favorites, card]
+      this.setState({favorites: newState})      
+    }   
   }
 
-  handlePlanets = async () => {
-    const response = await getAPI('planets')
-    this.setState({info: response})
-  }
-
-  handlePeople = async () => {
-    const response = await getAPI('people')
+  handleFetch = async (type) => {
+    const response = await getAPI(type)
     this.setState({info: response})
   }
 
@@ -55,15 +60,16 @@ class App extends Component {
     return (
       <div className="App">
         <Header 
-          controlFunction={this.handleClick}
+          controlFunction={this.showFavorites}
+          value={this.state.favorites}
         />
         <Nav 
           controlFunction={this.handleClick}
         />
-        <Main 
+        <Main
           scroll={this.state.scroll} 
           info={this.state.info}
-          controlFunction={this.handleNewFavorite}
+          controlFunction={this.handleFavorite}
         />
       </div>
     );

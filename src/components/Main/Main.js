@@ -4,7 +4,6 @@ import CardContainer from '../CardContainer/CardContainer.js'
 import './Main.css'
 
 const Main = ({info, scroll, controlFunction}) => {
-
   return (
     <div>
       <div className="scroll-div">

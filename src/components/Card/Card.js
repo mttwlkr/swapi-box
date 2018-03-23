@@ -3,7 +3,9 @@ import Button from '../Button/Button.js'
 import './Card.css'
 
 const Card = ({card, controlFunction}) => {
-  const keys = Object.keys(card).filter(key => key !== card.name)
+  
+  const keys = Object.keys(card).filter(key => key !== 'name')
+  
   const newCardInfo = keys.map((element, idx) => {
     return <p className={element} key={idx}>{element} : {card[element]}</p>
   })

@@ -6,10 +6,14 @@ const Header = (props) => {
   return (
     <header className='header'>
       <h1>Swapi Box</h1>
-      <Button 
+      <div className='favorites-button-div'>
+        <Button 
         name="favorites-nav"
         controlFunction={props.controlFunction}
       />
+        <span>{props.value.length}</span>
+      </div>
+
     </header>
   )
 }

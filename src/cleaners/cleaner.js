@@ -87,6 +87,9 @@ export {
   cleanOpeningScroll,
   cleanPeople,
   getHomeWorld,
-  getSpecies
+  getSpecies,
+  cleanPlanets,
+  getResidents,
+  cleanVehicles
 }
 
