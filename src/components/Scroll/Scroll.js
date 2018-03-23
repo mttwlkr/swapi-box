@@ -1,13 +1,13 @@
 import React from 'react'
 import './Scroll.css'
 
-const Scroll = (props) => {
-  const {title, scroll, date} = props.scroll
+const Scroll = ({scroll}) => {
+  const {title, text, date} = scroll
   return (
     <div>
       <h1>{title}</h1>
       <h2>{date}</h2>
-      <p>{scroll}</p>
+      <p>{text}</p>
     </div>
   )
 }

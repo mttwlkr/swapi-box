@@ -1,15 +1,16 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Scroll from './Scroll.js';
+import { mockCleanScrollData } from '../../cleaners/mocks.js'
 
 describe('Scroll', () => {
 
   it('should render without crashing', () => {
-    shallow(<Scroll />)  
+    shallow(<Scroll scroll={mockCleanScrollData} />)  
   })
 
-  it.skip('should match the snapshot', () => {
-    let wrapper = shallow(<Scroll />)
+  it('should match the snapshot', () => {
+    let wrapper = shallow(<Scroll scroll={mockCleanScrollData} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
