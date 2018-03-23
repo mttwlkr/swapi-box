@@ -9,10 +9,9 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      scroll: {},
-      people: '',
-      planets: {},
-      vehicles: {}
+      scroll: '',
+      info: [],
+      favorites: [],
     }
   }
 
@@ -24,25 +23,27 @@ class App extends Component {
       break;
       case 'planets': this.handlePlanets()
       break;
-      case 'favorites-card': console.log('favorites-card')
-      break;
-      case 'favorites-nav': console.log('favorites-nav')
     }
+  }
+
+  handleNewFavorite = (card) => {
+    const newFavorites = [...this.state.favorites, card]
+    this.setState({favorites: newFavorites})
   }
 
   handleVehicles = async () => {
     const response = await getAPI('vehicles')
-    this.setState({vehicles: response})
+    this.setState({info: response})
   }
 
   handlePlanets = async () => {
     const response = await getAPI('planets')
-    this.setState({planets: response})
+    this.setState({info: response})
   }
 
   handlePeople = async () => {
     const response = await getAPI('people')
-    this.setState({people: response})
+    this.setState({info: response})
   }
 
   async componentDidMount() {
@@ -61,8 +62,8 @@ class App extends Component {
         />
         <Main 
           scroll={this.state.scroll} 
-          people={this.state.people}
-          controlFunction={this.handleClick}
+          info={this.state.info}
+          controlFunction={this.handleNewFavorite}
         />
       </div>
     );
@@ -70,4 +71,3 @@ class App extends Component {
 }
 
 export default App;
-

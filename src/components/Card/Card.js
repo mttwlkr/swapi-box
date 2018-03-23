@@ -2,23 +2,23 @@ import React from 'react'
 import Button from '../Button/Button.js'
 import './Card.css'
 
-const Card = ({unit, controlFunction}) => {
-  const {personName, planetName, species, population} = unit
+const Card = ({card, controlFunction}) => {
+  const keys = Object.keys(card).filter(key => key !== card.name)
+  const newCardInfo = keys.map((element, idx) => {
+    return <p className={element} key={idx}>{element} : {card[element]}</p>
+  })
+
   return (
-    <li className="card">
-      <header>
-        <h1 className="card-info card-title">{personName}</h1>
-        <Button 
-          className="card-favorite-button"
-          name="favorites-card"
-          controlFunction={controlFunction}
-        />
-      </header>
-      <h2 className="card-info card-name">{planetName}</h2>
-      <p className="card-info card-sub">{species}</p>
-      <p className="card-info card-footer">{population}</p>
+    <li className='card'>
+      <h2 className='card-title'>{card.name}</h2>
+      <Button 
+        name='favorites-card'
+        controlFunction={() => controlFunction(card)}
+      />
+      {newCardInfo}
     </li>
   )
 }
 
 export default Card 
+
