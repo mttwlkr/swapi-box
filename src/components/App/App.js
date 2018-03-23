@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       scroll: '',
       info: [],
+      favorites: [],
     }
   }
 
@@ -22,10 +23,12 @@ class App extends Component {
       break;
       case 'planets': this.handlePlanets()
       break;
-      case 'favorites-card': console.log('favorites-card')
-      break;
-      case 'favorites-nav': console.log('favorites-nav')
     }
+  }
+
+  handleNewFavorite = (card) => {
+    const newFavorites = [...this.state.favorites, card]
+    this.setState({favorites: newFavorites})
   }
 
   handleVehicles = async () => {
@@ -60,10 +63,7 @@ class App extends Component {
         <Main 
           scroll={this.state.scroll} 
           info={this.state.info}
-          // people={this.state.people}
-          // planets={this.state.planets}
-          // vehicles={this.state.vehicles}
-          controlFunction={this.handleClick}
+          controlFunction={this.handleNewFavorite}
         />
       </div>
     );

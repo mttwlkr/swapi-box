@@ -9,9 +9,9 @@ const CardContainer = ({info, controlFunction}) => {
   })
   
   return (
-    <ul className="card-container">
+    <section className="card-container">
       {newCards}
-    </ul>
+    </section>
   )
 }
 

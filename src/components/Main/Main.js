@@ -11,7 +11,7 @@ const Main = ({info, scroll, controlFunction}) => {
       {info.length === 0 && <Scroll scroll={scroll}/>}
       </div>
       <div className="card-div">
-      {info.length > 1 && <CardContainer info={info} controlFunction={controlFunction}/>}
+      {info.length > 0 && <CardContainer info={info} controlFunction={controlFunction}/>}
       </div>
     </div>
   )

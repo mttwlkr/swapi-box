@@ -3,16 +3,22 @@ import Button from '../Button/Button.js'
 import './Card.css'
 
 const Card = ({card, controlFunction}) => {
-  const keys = Object.keys(card)
+  const keys = Object.keys(card).filter(key => key !== card.name)
   const newCardInfo = keys.map((element, idx) => {
-    return <li className={element} key={idx}>{element} : {card[element]}</li>
+    return <p className={element} key={idx}>{element} : {card[element]}</p>
   })
 
   return (
-    <div>
+    <li className='card'>
+      <h2 className='card-title'>{card.name}</h2>
+      <Button 
+        name='favorites-card'
+        controlFunction={() => controlFunction(card)}
+      />
       {newCardInfo}
-    </div>
+    </li>
   )
 }
 
 export default Card 
+
