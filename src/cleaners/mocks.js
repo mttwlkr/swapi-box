@@ -15,6 +15,14 @@ const mockDirtyFilmData = {
   vehicles: ["https://swapi.co/api/vehicles/4/", "https://swapi.co/api/vehicles/6/", "https://swapi.co/api/vehicles/7/", "https://swapi.co/api/vehicles/8/"],
 }
 
+const mockCleanCardData = {
+  name: 'Sand Crawler',
+  model : 'Digger Crawler',
+  passengers : '30',
+  vehicle_class : 'wheeled',
+}
+
 export {
-  mockDirtyFilmData
+  mockDirtyFilmData,
+  mockCleanCardData
 }
