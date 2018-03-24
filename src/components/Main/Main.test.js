@@ -1,15 +1,34 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import CardContainer from './CardContainer.js';
+import Main from './Main.js';
+import { mockCleanCardData, mockCleanFilmData } from '../../cleaners/mocks.js'
 
-describe('CardContainer', () => {
+describe('Main', () => {
 
-  it('should render without crashing', () => {
-    shallow(<CardContainer />)  
-  })
+  let wrapper, cards, scroll, mockControlFunction 
+
+  beforeEach(() => {
+    cards = mockCleanCardData;
+    scroll = mockCleanFilmData;
+    mockControlFunction = jest.fn()
+    wrapper = shallow(<Main 
+      cards={mockCleanCardData} 
+      scroll={mockCleanFilmData}
+      controlFunction={mockControlFunction}
+    />)
+  });
 
   it.skip('should match the snapshot', () => {
-    let wrapper = shallow(<CardContainer />)
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it.skip('should render the scroll if there is no cards coming through', () => {
+    wrapper = shallow(<Main 
+      cards={mockCleanCardData} 
+      scroll={mockCleanFilmData}
+      controlFunction={mockControlFunction}
+    />)
+    console.log(wrapper.debug())
+    expect(wrapper.find('scroll-div').length).toEqual(1)
   })
 })

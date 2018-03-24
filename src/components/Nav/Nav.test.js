@@ -4,12 +4,12 @@ import Nav from './Nav.js';
 
 describe('Nav', () => {
 
-  let controlFunction;
+  let mockControlFunction;
   let wrapper;
 
   beforeEach(() => {
-    controlFunction = jest.fn()
-    wrapper = shallow(<Nav controlFunction={controlFunction}/>)    
+    mockControlFunction = jest.fn()
+    wrapper = shallow(<Nav controlFunction={mockControlFunction}/>)    
   })
 
   it('should match the snapshot', () => {
@@ -18,6 +18,6 @@ describe('Nav', () => {
 
   it('should invoke the props control function when a button is clicked', () => {
     wrapper.find('.people-button').simulate('click')
-    expect(controlFunction).toHaveBeenCalled()
+    expect(mockControlFunction).toHaveBeenCalled()
   })
 })

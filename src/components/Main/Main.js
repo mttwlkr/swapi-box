@@ -3,15 +3,19 @@ import Scroll from '../Scroll/Scroll.js'
 import CardContainer from '../CardContainer/CardContainer.js'
 import './Main.css'
 
-const Main = ({info, scroll, controlFunction}) => {
+const Main = ({cards, scroll, controlFunction}) => {
   return (
     <div>
-      <div className="scroll-div">
-      {info.length === 0 && <Scroll scroll={scroll}/>}
-      </div>
-      <div className="card-div">
-      {info.length > 0 && <CardContainer info={info} controlFunction={controlFunction}/>}
-      </div>
+      { cards.length === 0 &&
+        <div className="scroll-div">
+          <Scroll scroll={scroll}/>
+        </div>
+      }
+      { cards.length > 0 &&
+        <div className="card-div">
+          <CardContainer cards={cards} controlFunction={controlFunction}/>
+        </div>
+      }
     </div>
   )
 }
