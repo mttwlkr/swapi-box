@@ -13,7 +13,6 @@ const Header = (props) => {
       />
         <span>{props.value.length}</span>
       </div>
-
     </header>
   )
 }
