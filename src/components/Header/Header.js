@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../Button/Button.js'
 import './Header.css'
 
 const Header = (props) => {
@@ -7,10 +6,12 @@ const Header = (props) => {
     <header className='header'>
       <h1>Swapi Box</h1>
       <div className='favorites-button-div'>
-        <Button 
-        name="favorites-nav"
-        controlFunction={props.controlFunction}
-      />
+        <button
+        className='favorites-button'
+        name='favorites-nav'
+        onClick={props.controlFunction}
+        >favorites-nav
+        </button>
         <span>{props.value.length}</span>
       </div>
     </header>

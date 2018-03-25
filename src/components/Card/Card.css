@@ -1,14 +1,32 @@
 .card {
-  border: 1px solid chartreuse;
+  border: 1px solid #e6bc42;
   width: 250px;
   height: 400px;
   margin-top: 50px;
+  background: rgba(117, 67, 45, .8); /*#75432D; */
+}
+
+.card-title {
+  color: #221C33;
+}
+
+.favorites-btn-card {
+  background: #e6bc42;
+  border: none;
+}
+
+.card-header-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .card-info {
-  color: magenta;
+  color: red;
 }
 
-.card-favorite-button {
-  color: blue;
-}
+
+/* #75432D; planets */
+/* #4F293A; */
+/*#C76832;*/
+/*#576f27*/

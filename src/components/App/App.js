@@ -59,13 +59,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header 
-          controlFunction={this.showFavorites}
-          value={this.state.favorites}
-        />
-        <Nav 
-          controlFunction={this.handleClick}
-        />
+        <div className='header-background'>
+          <Header 
+            controlFunction={this.showFavorites}
+            value={this.state.favorites}
+          />
+          <Nav 
+            controlFunction={this.handleClick}
+          />
+        </div>
         <Main
           scroll={this.state.scroll} 
           cards={this.state.cards}
