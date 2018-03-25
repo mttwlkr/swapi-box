@@ -40,7 +40,7 @@ const cleanPeople = async (data) => {
     const name = person.name
     const homeworld = await getHomeWorld(person.homeworld)
     const species = await getSpecies(person.species)
-    return {name, ...homeworld, species}
+    return {name, ...homeworld, species, isActive: false}
   })
   return await Promise.all(promises)
 }
@@ -60,7 +60,7 @@ const cleanPlanets = async (data) => {
   const promises = data.results.map(async(planet) => {
     const {name, terrain, population, climate} = planet
     const residents = await getResidents(planet.residents)
-    return ({name, terrain, population, climate, residents})
+    return ({name, terrain, population, climate, residents, isActive: false})
   })
   return Promise.all(promises)
 }
@@ -76,7 +76,7 @@ const getResidents = (residentsAPIs) => {
 const cleanVehicles = async (data) => {
   const promises = data.results.map(async(vehicle) => {
     const {name, model, passengers, vehicle_class} = vehicle
-    return ({name, model, passengers, vehicle_class})
+    return ({name, model, passengers, vehicle_class, isActive: false})
   })
   return Promise.all(promises)
 }

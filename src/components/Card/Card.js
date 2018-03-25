@@ -4,14 +4,16 @@ import PropTypes from 'prop-types'
 
 const Card = ({card, controlFunction}) => {
   
-  const keys = Object.keys(card).filter(key => key !== 'name')
+  const keys = Object.keys(card).filter(key => key !== 'name' && key !== 'isActive')
   
   const newCardInfo = keys.map((element, idx) => {
     return <p className={'card-info ' + element} key={idx}>{element} : {card[element]}</p>
   })
 
+  let active = card.isActive ? 'active' : '';
+
   return (
-    <li className='card'>
+    <li className={'card ' + active} >
       <div className='card-header-div'>
         <h2 className='card-title'>{card.name}</h2>
         <button

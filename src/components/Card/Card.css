@@ -25,6 +25,10 @@
   color: red;
 }
 
+.active {
+  background: #fff;
+}
+
 
 /* #75432D; planets */
 /* #4F293A; */

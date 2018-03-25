@@ -38,9 +38,11 @@ class App extends Component {
     const names = this.state.favorites.map(fav => fav.name)
     const idx = names.indexOf(card.name)
     if (this.state.favorites.length > 0 && idx !== -1 ) {
+      card.isActive = false;
       const newState = this.state.favorites.filter(fav => fav.name !== card.name)
       this.setState({favorites: newState})
     } else {
+      card.isActive = true;
       const newState = [...this.state.favorites, card]
       this.setState({favorites: newState})      
     }   
