@@ -204,7 +204,6 @@ describe('cleaner', () => {
           })
         })
       }))
-      // const response = await parseFunc(mockAPIPlanetData)
       const expected = await getSpecies(mockAPIResidentData)
       console.log(expected)
       expect(expected).toEqual(mockCleanResidentData)
