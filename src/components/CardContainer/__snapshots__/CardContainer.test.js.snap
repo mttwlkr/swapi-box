@@ -1,0 +1,679 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    cards={
+        Array [
+            Object {
+              "name": "Luke Skywalker",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            Object {
+              "name": "C-3PO",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Droid",
+            },
+            Object {
+              "name": "R2-D2",
+              "planetName": "Naboo",
+              "population": "4500000000",
+              "species": "Droid",
+            },
+            Object {
+              "name": "Darth Vader",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            Object {
+              "name": "Leia Organa",
+              "planetName": "Alderaan",
+              "population": "2000000000",
+              "species": "Human",
+            },
+            Object {
+              "name": "Owen Lars",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            Object {
+              "name": "Beru Whitesun lars",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            Object {
+              "name": "R5-D4",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Droid",
+            },
+            Object {
+              "name": "Biggs Darklighter",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            Object {
+              "name": "Obi-Wan Kenobi",
+              "planetName": "Stewjon",
+              "population": "unknown",
+              "species": "Human",
+            },
+          ]
+    }
+    controlFunction={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+                    Object {
+                              "name": "Luke Skywalker",
+                              "planetName": "Tatooine",
+                              "population": "200000",
+                              "species": "Human",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "C-3PO",
+                              "planetName": "Tatooine",
+                              "population": "200000",
+                              "species": "Droid",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "R2-D2",
+                              "planetName": "Naboo",
+                              "population": "4500000000",
+                              "species": "Droid",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "Darth Vader",
+                              "planetName": "Tatooine",
+                              "population": "200000",
+                              "species": "Human",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "Leia Organa",
+                              "planetName": "Alderaan",
+                              "population": "2000000000",
+                              "species": "Human",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "Owen Lars",
+                              "planetName": "Tatooine",
+                              "population": "200000",
+                              "species": "Human",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "Beru Whitesun lars",
+                              "planetName": "Tatooine",
+                              "population": "200000",
+                              "species": "Human",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "R5-D4",
+                              "planetName": "Tatooine",
+                              "population": "200000",
+                              "species": "Droid",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "Biggs Darklighter",
+                              "planetName": "Tatooine",
+                              "population": "200000",
+                              "species": "Human",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+        <Card
+          card={
+                    Object {
+                              "name": "Obi-Wan Kenobi",
+                              "planetName": "Stewjon",
+                              "population": "unknown",
+                              "species": "Human",
+                            }
+          }
+          controlFunction={[Function]}
+/>,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "Luke Skywalker",
+            "planetName": "Tatooine",
+            "population": "200000",
+            "species": "Human",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "C-3PO",
+            "planetName": "Tatooine",
+            "population": "200000",
+            "species": "Droid",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "R2-D2",
+            "planetName": "Naboo",
+            "population": "4500000000",
+            "species": "Droid",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "Darth Vader",
+            "planetName": "Tatooine",
+            "population": "200000",
+            "species": "Human",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "4",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "Leia Organa",
+            "planetName": "Alderaan",
+            "population": "2000000000",
+            "species": "Human",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "5",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "Owen Lars",
+            "planetName": "Tatooine",
+            "population": "200000",
+            "species": "Human",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "6",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "Beru Whitesun lars",
+            "planetName": "Tatooine",
+            "population": "200000",
+            "species": "Human",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "7",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "R5-D4",
+            "planetName": "Tatooine",
+            "population": "200000",
+            "species": "Droid",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "8",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "Biggs Darklighter",
+            "planetName": "Tatooine",
+            "population": "200000",
+            "species": "Human",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "9",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "Obi-Wan Kenobi",
+            "planetName": "Stewjon",
+            "population": "unknown",
+            "species": "Human",
+          },
+          "controlFunction": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+                        Object {
+                                    "name": "Luke Skywalker",
+                                    "planetName": "Tatooine",
+                                    "population": "200000",
+                                    "species": "Human",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "C-3PO",
+                                    "planetName": "Tatooine",
+                                    "population": "200000",
+                                    "species": "Droid",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "R2-D2",
+                                    "planetName": "Naboo",
+                                    "population": "4500000000",
+                                    "species": "Droid",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "Darth Vader",
+                                    "planetName": "Tatooine",
+                                    "population": "200000",
+                                    "species": "Human",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "Leia Organa",
+                                    "planetName": "Alderaan",
+                                    "population": "2000000000",
+                                    "species": "Human",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "Owen Lars",
+                                    "planetName": "Tatooine",
+                                    "population": "200000",
+                                    "species": "Human",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "Beru Whitesun lars",
+                                    "planetName": "Tatooine",
+                                    "population": "200000",
+                                    "species": "Human",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "R5-D4",
+                                    "planetName": "Tatooine",
+                                    "population": "200000",
+                                    "species": "Droid",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "Biggs Darklighter",
+                                    "planetName": "Tatooine",
+                                    "population": "200000",
+                                    "species": "Human",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+          <Card
+            card={
+                        Object {
+                                    "name": "Obi-Wan Kenobi",
+                                    "planetName": "Stewjon",
+                                    "population": "unknown",
+                                    "species": "Human",
+                                  }
+            }
+            controlFunction={[Function]}
+/>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "Luke Skywalker",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "C-3PO",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Droid",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "R2-D2",
+              "planetName": "Naboo",
+              "population": "4500000000",
+              "species": "Droid",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "Darth Vader",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "4",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "Leia Organa",
+              "planetName": "Alderaan",
+              "population": "2000000000",
+              "species": "Human",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "5",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "Owen Lars",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "6",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "Beru Whitesun lars",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "7",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "R5-D4",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Droid",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "8",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "Biggs Darklighter",
+              "planetName": "Tatooine",
+              "population": "200000",
+              "species": "Human",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "9",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "Obi-Wan Kenobi",
+              "planetName": "Stewjon",
+              "population": "unknown",
+              "species": "Human",
+            },
+            "controlFunction": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

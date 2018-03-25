@@ -1,6 +1,7 @@
 import React from 'react'
-import Button from '../Button/Button.js'
+// import Button from '../Button/Button.js'
 import './Card.css'
+import PropTypes from 'prop-types'
 
 const Card = ({card, controlFunction}) => {
   
@@ -13,13 +14,20 @@ const Card = ({card, controlFunction}) => {
   return (
     <li className='card'>
       <h2 className='card-title'>{card.name}</h2>
-      <Button 
+      <button
+        className='favorites-card'
         name='favorites-card'
-        controlFunction={() => controlFunction(card)}
-      />
+        onClick={() => controlFunction(card)}
+      >favorites-card
+      </button>
       {newCardInfo}
     </li>
   )
+}
+
+Card.propTypes = {
+  card: PropTypes.object,
+  controlFunction: PropTypes.func
 }
 
 export default Card 

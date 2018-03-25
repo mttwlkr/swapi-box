@@ -9,8 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      scroll: '',
-      info: [],
+      scroll: [],
+      cards: [],
       favorites: []
     }
   }
@@ -31,7 +31,7 @@ class App extends Component {
       alert('Please choose some favorites first!')
     }
     let currentFavorites = this.state.favorites
-    this.setState({info: currentFavorites})
+    this.setState({cards: currentFavorites})
   }
 
   handleFavorite = (card) => {
@@ -48,7 +48,7 @@ class App extends Component {
 
   handleFetch = async (type) => {
     const response = await getAPI(type)
-    this.setState({info: response})
+    this.setState({cards: response})
   }
 
   async componentDidMount() {
@@ -68,7 +68,7 @@ class App extends Component {
         />
         <Main
           scroll={this.state.scroll} 
-          info={this.state.info}
+          cards={this.state.cards}
           controlFunction={this.handleFavorite}
         />
       </div>

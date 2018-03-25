@@ -29,7 +29,7 @@ const cleanOpeningScroll = async (data) => {
   let randomNumber = Math.floor((Math.random() * 7) + 1)
   const film = data.results[randomNumber]
   return ({
-    scroll: film.opening_crawl,
+    text: film.opening_crawl,
     title: film.title,
     date: film.release_date
   })
