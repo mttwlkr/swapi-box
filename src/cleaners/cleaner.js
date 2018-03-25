@@ -26,7 +26,7 @@ const parseFunc = async (url) => {
 }
 
 const cleanOpeningScroll = async (data) => {
-  let randomNumber = Math.floor((Math.random() * 7) + 1)
+  let randomNumber = Math.floor((Math.random() * 6) + 1)
   const film = data.results[randomNumber]
   return ({
     text: film.opening_crawl,

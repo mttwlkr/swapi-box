@@ -4,11 +4,15 @@ import './Scroll.css'
 const Scroll = ({scroll}) => {
   const {title, text, date} = scroll
   return (
-    <div>
-      <h1>{title}</h1>
-      <h2>{date}</h2>
-      <p>{text}</p>
-    </div>
+    <section className='star-wars'>  
+      <div className='crawl'>
+        <div className='title'>
+          <p>{date}</p>
+          <h1>{title}</h1>
+        </div>
+        <p>{text}</p>
+      </div>
+    </section>
   )
 }
 
