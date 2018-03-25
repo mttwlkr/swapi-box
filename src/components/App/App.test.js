@@ -63,10 +63,9 @@ describe('App', () => {
     expect(wrapper.state('favorites').length).toEqual(0)
   })
 
-  it.skip('should set cards in state when handleFetch is invoked', async () => {
+  it('should set cards in state when handleFetch is invoked', async () => {
     expect(wrapper.state('cards').length).toEqual(0)
     wrapper.instance().handleFetch('vehicles')
-
     window.fetch = jest.fn().mockImplementation( () => ({
         status: 200,
         json: () => new Promise((resolve, reject) => {
@@ -75,37 +74,7 @@ describe('App', () => {
           })
         })
       }))
-    const response = await parseFunc(`https://swapi.co/api/vehicles/`)
-    const answer = await cleanVehicles(response)
-    console.log(answer)
+    const answer = await cleanVehicles(mockAPIVehicleData)
     expect(wrapper.state('cards').length).toEqual(10)
   }) 
 })
-
-
-    // window.fetch = jest.fn().mockImplementation( () => ({
-    //     status: 200,
-    //     json: () => new Promise((resolve, reject) => {
-    //       resolve({
-    //         mockAPIVehicleData
-    //       })
-    //     })
-    //   }))
-    // parseFunc()
-    // const answer = await cleanVehicles(mockAPIVehicleData)
-    // console.log(answer)
-
-    // expect(wrapper.instance().handleFetch).toHaveBeenCalledWith(mockVehicles)
-    // console.log(wrapper)
-    // const handleFetch = jest.fn()
-    // const parseFunc = jest.fn()
-    // const getAPI = jest.fn()
-    // wrapper.instance().handleClick(mockEvent)
-
-    // window.fetch = jest.fn().mockImplementation(() => ({
-    //   status: 200,
-    //   json: () => new Promise.resolve()
-    // }))
-
-    // console.log(wrapper.debug())
-    // expect(wrapper.instance().handleFetch()).toHaveBeenCalled()

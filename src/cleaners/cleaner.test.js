@@ -91,9 +91,7 @@ describe('cleaner', () => {
         })
       }))
       const returnedValue = await cleanOpeningScroll(mockAPIFilmData)
-      console.log(returnedValue)
       const expected = returnedValue[mockRandomNumber]
-      //expected(returnedValue).toEqual(mockCleanFilmData)
     })
   })
 
