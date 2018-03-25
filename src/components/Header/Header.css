@@ -1,19 +1,19 @@
 .header {
-/*  border: 1px solid #E5BC41;*/
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   height: 100px;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .favorites-button-div {
-/*  border: 1px solid #E5BC41;*/
   background-color: #E5BC41;
   height: 30%;
   width: 13.5%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 25px;
 }
 
 .favorites-button {
@@ -21,8 +21,14 @@
   border: none;
 }
 
-h1 {
-  color: #E5BC41;
+img {
+  padding: 5%;
+/*  background-image: url(swapi-box-logo.png);*/
+/*  font-family: 'Carrois Gothic', sans-serif;
+  font-size: 18px;*/
+/*  font-family: 'Pathway Gothic One', sans-serif;*/
+/*  color: #E5BC41;*/
+  margin-left: 2%;
 }
 
 

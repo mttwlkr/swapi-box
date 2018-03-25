@@ -1,16 +1,17 @@
 import React from 'react'
 import './Header.css'
+import logo from './swapi-box-logo.png'
 
 const Header = (props) => {
   return (
     <header className='header'>
-      <h1>Swapi Box</h1>
+      <img src={logo} alt="Swapi Box" />
       <div className='favorites-button-div'>
         <button
         className='favorites-button'
         name='favorites-nav'
         onClick={props.controlFunction}
-        >favorites-nav
+        >Your Favorites
         </button>
         <span>{props.value.length}</span>
       </div>
