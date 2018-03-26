@@ -16,14 +16,7 @@ class App extends Component {
   }
 
   handleClick = (event) => {
-    switch (event.target.name) {
-    case 'vehicles': this.handleFetch('vehicles');
-      break;
-    case 'people': this.handleFetch('people');
-      break;
-    case 'planets': this.handleFetch('planets');
-      break;
-    }
+    this.handleFetch(event.target.name);
   }
 
   showFavorites = () => {

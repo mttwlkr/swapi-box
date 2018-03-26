@@ -1,25 +1,16 @@
-import { getAPI,
-  parseFunc,
-  cleanOpeningScroll,
+import { parseFunc,
   cleanPeople,
-  getHomeWorld,
-  getSpecies,
   cleanPlanets,
-  getResidents,
   cleanVehicles } from './cleaner.js';
 
-import { mockAPIFilmData, 
-  mockAPIVehicleData, 
+import { mockAPIVehicleData, 
   mockCleanVehicleData,
   mockAPIPeopleData,
   mockCleanPeopleData,
-  mockAPIHomeworldData,
-  mockAPISpeciesData,
-  mockCleanSpeciesData,
   mockAPIPlanetData,
-  mockCleanPlanetData,
-  mockCleanResidentData,
-  mockAPIResidentData } from './mocks.js';
+  mockCleanPlanetData } from './mocks.js';
+
+
 
 describe('cleaner', () => {
 
