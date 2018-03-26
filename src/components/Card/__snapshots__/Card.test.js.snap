@@ -65,12 +65,12 @@ ShallowWrapper {
         <button
           className="favorites-btn-card"
           name="favorites-card"
-          onClick={[Function]}
 >
           Favorite
 </button>,
       ],
       "className": "card ",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -190,7 +190,6 @@ ShallowWrapper {
           "children": "Favorite",
           "className": "favorites-btn-card",
           "name": "favorites-card",
-          "onClick": [Function],
         },
         "ref": null,
         "rendered": "Favorite",
@@ -243,12 +242,12 @@ ShallowWrapper {
           <button
             className="favorites-btn-card"
             name="favorites-card"
-            onClick={[Function]}
 >
             Favorite
 </button>,
         ],
         "className": "card ",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -368,7 +367,6 @@ ShallowWrapper {
             "children": "Favorite",
             "className": "favorites-btn-card",
             "name": "favorites-card",
-            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Favorite",

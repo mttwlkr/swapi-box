@@ -59,7 +59,8 @@ const getSpecies = async (species) => {
 const cleanPlanets = async (datas) => {
   const promises = datas.results.map(async(planet) => {
     const {name, terrain, population, climate} = planet;
-    const residents = planet.residents.length > 0 ? await getResidents(planet.residents) : 'No Residents';
+    const residents = planet.residents.length > 0 
+    ? await getResidents(planet.residents) : 'No Residents';
     return ({name, terrain, population, climate, residents, isActive: false});
   });
   return Promise.all(promises);

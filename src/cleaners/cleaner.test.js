@@ -26,14 +26,15 @@ describe('cleaner', () => {
   describe('getAPI', () => {
     
     it('should decide which method to fire based on arguments', () => {
+      const getAPI = jest.fn();
       const cleanVehicles = jest.fn();
+      getAPI('vehicles');
       cleanVehicles(mockAPIVehicleData);
 
       window.fetch = jest.fn().mockImplementation(() => ({
         status: 200,
         json: () => new Promise.resolve()
       }));
-
       expect(cleanVehicles).toHaveBeenCalled();
     });
   });
@@ -62,25 +63,6 @@ describe('cleaner', () => {
       }));
       expect(parseFunc(url)).rejects
         .toEqual(Error('Was not able to get datas'));
-    });
-  });
-
-  describe('cleanOpeningScroll', () => {
-    // let mockRandomNumber;
-
-    it.skip('should return a cleaned opening scroll', async () => {
-      // mockRandomNumber = 1;
-      window.fetch = jest.fn().mockImplementation(() => ({
-        status: 200,
-        json: () => new Promise((resolve) => {
-          resolve({
-            mockAPIFilmData
-          });
-        })
-      }));
-      const returnedValue = await cleanOpeningScroll(mockAPIFilmData);
-      console.log(returnedValue)
-      // const expected = returnedValue[mockRandomNumber];
     });
   });
 
@@ -130,71 +112,6 @@ describe('cleaner', () => {
       }));
       const expected = await cleanVehicles(mockAPIVehicleData);
       expect(expected).toEqual(mockCleanVehicleData);
-    });
-  });
-
-  describe('getHomeWorld', () => {
-
-    it('should return a cleaned object of name and population', async () => {
-      // const url = 'https://swapi.co/api/planets/1/'
-      
-      window.fetch = jest.fn().mockImplementation( () => ({
-        status: 200,
-        json: () => new Promise((resolve) => {
-          resolve({
-            mockAPIHomeworldData
-          });
-        })
-      }));
-
-      // const answer = await parseFunc(mockAPIHomeworldData)
-      const response = await getHomeWorld('https://swapi.co/api/planets/1/');
-      // const answer = await parseFunc(response)
-      // console.log(response)
-      expect(response).toEqual({});
-      // const response = await getHomeWorld('https://swapi.co/api/planets/1/')
-      // const data = await parseFunc(response)
-      // const response = await parseFunc('https://swapi.co/api/planets/1/')
-      // console.log(response)
-      // const response = await getHomeWorld(mockAPIHomeworldData)
-      // expect ({planetName: Stewjon, planetPopulation: 2839823})
-      // console.log(expected)
-      // expect(expected).toEqual(mockCleanHomeworldData)
-    });
-  });
-
-  describe('getSpecies', () => {
-
-    it.skip('should return a cleaned object of the species name', async () => {
-
-      window.fetch = jest.fn().mockImplementation( () => ({
-        status: 200,
-        json: () => new Promise((resolve) => {
-          resolve({
-            mockAPISpeciesData 
-          });
-        })
-      }));
-      const response = await parseFunc(mockAPISpeciesData);
-      const expected = await getSpecies(response);
-      expect(expected).toEqual(mockCleanSpeciesData);
-    });
-  });
-
-  describe('getResidents', () => {
-
-    it.skip('should return name, terrain, population, climate', async () => {
-
-      window.fetch = jest.fn().mockImplementation( () => ({
-        status: 200,
-        json: () => new Promise((resolve) => {
-          resolve({
-            mockAPIResidentData
-          });
-        })
-      }));
-      const expected = await getResidents(mockAPIResidentData);
-      expect(expected).toEqual(mockCleanResidentData);
     });
   });
 });

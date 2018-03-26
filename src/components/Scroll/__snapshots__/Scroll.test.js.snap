@@ -25,31 +25,143 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <section
-        className="star-wars"
+      "children": <div
+        className="crawl"
 >
         <div
-                className="crawl"
+                className="title"
         >
-                <div
-                        className="title"
-                >
-                        <p>
-                                2002-05-16
-                        </p>
-                        <h1>
-                                Attack of the Clones
-                        </h1>
-                </div>
                 <p>
-                        There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
+                        2002-05-16
                 </p>
+                <h1>
+                        Attack of the Clones
+                </h1>
         </div>
-</section>,
-      "className": "fade",
+        <p>
+                There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
+        </p>
+        <br />
+        <p
+                className="option"
+        >
+                Please click on an option above to continue...
+        </p>
+</div>,
+      "className": "star-wars",
     },
     "ref": null,
     "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="title"
+>
+            <p>
+                        2002-05-16
+            </p>
+            <h1>
+                        Attack of the Clones
+            </h1>
+</div>,
+          <p>
+            There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
+</p>,
+          <br />,
+          <p
+            className="option"
+>
+            Please click on an option above to continue...
+</p>,
+        ],
+        "className": "crawl",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                2002-05-16
+</p>,
+              <h1>
+                Attack of the Clones
+</h1>,
+            ],
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "2002-05-16",
+              },
+              "ref": null,
+              "rendered": "2002-05-16",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Attack of the Clones",
+              },
+              "ref": null,
+              "rendered": "Attack of the Clones",
+              "type": "h1",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....",
+          },
+          "ref": null,
+          "rendered": "There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Please click on an option above to continue...",
+            "className": "option",
+          },
+          "ref": null,
+          "rendered": "Please click on an option above to continue...",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -69,6 +181,12 @@ ShallowWrapper {
           </div>
           <p>
                     There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
+          </p>
+          <br />
+          <p
+                    className="option"
+          >
+                    Please click on an option above to continue...
           </p>
 </div>,
         "className": "star-wars",
@@ -92,6 +210,12 @@ ShallowWrapper {
 </div>,
             <p>
               There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
+</p>,
+            <br />,
+            <p
+              className="option"
+>
+              Please click on an option above to continue...
 </p>,
           ],
           "className": "crawl",
@@ -151,151 +275,31 @@ ShallowWrapper {
             "rendered": "There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....",
             "type": "p",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Please click on an option above to continue...",
+              "className": "option",
+            },
+            "ref": null,
+            "rendered": "Please click on an option above to continue...",
+            "type": "p",
+          },
         ],
         "type": "div",
       },
       "type": "section",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <section
-          className="star-wars"
->
-          <div
-                    className="crawl"
-          >
-                    <div
-                              className="title"
-                    >
-                              <p>
-                                        2002-05-16
-                              </p>
-                              <h1>
-                                        Attack of the Clones
-                              </h1>
-                    </div>
-                    <p>
-                              There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
-                    </p>
-          </div>
-</section>,
-        "className": "fade",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className="crawl"
->
-            <div
-                        className="title"
-            >
-                        <p>
-                                    2002-05-16
-                        </p>
-                        <h1>
-                                    Attack of the Clones
-                        </h1>
-            </div>
-            <p>
-                        There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
-            </p>
-</div>,
-          "className": "star-wars",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="title"
->
-                <p>
-                                2002-05-16
-                </p>
-                <h1>
-                                Attack of the Clones
-                </h1>
-</div>,
-              <p>
-                There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....
-</p>,
-            ],
-            "className": "crawl",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <p>
-                    2002-05-16
-</p>,
-                  <h1>
-                    Attack of the Clones
-</h1>,
-                ],
-                "className": "title",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "2002-05-16",
-                  },
-                  "ref": null,
-                  "rendered": "2002-05-16",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Attack of the Clones",
-                  },
-                  "ref": null,
-                  "rendered": "Attack of the Clones",
-                  "type": "h1",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....",
-              },
-              "ref": null,
-              "rendered": "There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....",
-              "type": "p",
-            },
-          ],
-          "type": "div",
-        },
-        "type": "section",
-      },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

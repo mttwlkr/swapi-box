@@ -10,8 +10,8 @@ const Header = (props) => {
         <img src={logo} alt="Swapi Box" />
       </div>
       <div 
-      className='favorites-button-div'
-      onClick={props.controlFunction}
+        className='favorites-button-div'
+        onClick={props.controlFunction}
       >
         <button
           className='favorites-button'

@@ -28,7 +28,7 @@ describe('Card', () => {
   });
 
   it('should invoke the control fn when favorite button is clicked', () => {
-    wrapper.find('button').simulate('click');
+    wrapper.find('li').simulate('click');
     expect(mockControlFunction).toHaveBeenCalledWith(mockCleanCardData);
   });
 });

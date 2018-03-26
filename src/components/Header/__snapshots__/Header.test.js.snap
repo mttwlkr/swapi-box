@@ -27,19 +27,23 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <img
-          alt="Swapi Box"
-          src="swapi-box-logo.png"
-/>,
+        <div
+          className="logo-div"
+>
+          <img
+                    alt="Swapi Box"
+                    src="swapi-box-logo.png"
+          />
+</div>,
         <div
           className="favorites-button-div"
+          onClick={[Function]}
 >
           <button
                     className="favorites-button"
                     name="favorites-nav"
-                    onClick={[Function]}
           >
-                    Your Favorites
+                    Favorites
           </button>
           <span>
                     3
@@ -55,12 +59,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "Swapi Box",
-          "src": "swapi-box-logo.png",
+          "children": <img
+            alt="Swapi Box"
+            src="swapi-box-logo.png"
+/>,
+          "className": "logo-div",
         },
         "ref": null,
-        "rendered": null,
-        "type": "img",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Swapi Box",
+            "src": "swapi-box-logo.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -71,15 +89,15 @@ ShallowWrapper {
             <button
               className="favorites-button"
               name="favorites-nav"
-              onClick={[Function]}
 >
-              Your Favorites
+              Favorites
 </button>,
             <span>
               3
 </span>,
           ],
           "className": "favorites-button-div",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -88,13 +106,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Your Favorites",
+              "children": "Favorites",
               "className": "favorites-button",
               "name": "favorites-nav",
-              "onClick": [Function],
             },
             "ref": null,
-            "rendered": "Your Favorites",
+            "rendered": "Favorites",
             "type": "button",
           },
           Object {
@@ -121,19 +138,23 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <img
-            alt="Swapi Box"
-            src="swapi-box-logo.png"
-/>,
+          <div
+            className="logo-div"
+>
+            <img
+                        alt="Swapi Box"
+                        src="swapi-box-logo.png"
+            />
+</div>,
           <div
             className="favorites-button-div"
+            onClick={[Function]}
 >
             <button
                         className="favorites-button"
                         name="favorites-nav"
-                        onClick={[Function]}
             >
-                        Your Favorites
+                        Favorites
             </button>
             <span>
                         3
@@ -149,12 +170,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "Swapi Box",
-            "src": "swapi-box-logo.png",
+            "children": <img
+              alt="Swapi Box"
+              src="swapi-box-logo.png"
+/>,
+            "className": "logo-div",
           },
           "ref": null,
-          "rendered": null,
-          "type": "img",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Swapi Box",
+              "src": "swapi-box-logo.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -165,15 +200,15 @@ ShallowWrapper {
               <button
                 className="favorites-button"
                 name="favorites-nav"
-                onClick={[Function]}
 >
-                Your Favorites
+                Favorites
 </button>,
               <span>
                 3
 </span>,
             ],
             "className": "favorites-button-div",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": Array [
@@ -182,13 +217,12 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Your Favorites",
+                "children": "Favorites",
                 "className": "favorites-button",
                 "name": "favorites-nav",
-                "onClick": [Function],
               },
               "ref": null,
-              "rendered": "Your Favorites",
+              "rendered": "Favorites",
               "type": "button",
             },
             Object {
