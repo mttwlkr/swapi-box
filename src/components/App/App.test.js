@@ -1,11 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App.js';
-import { cleanVehicles } from '../../cleaners/cleaner.js';
 
-import {
-  mockAPIVehicleData, 
-  mockCleanCardData } from '../../cleaners/mocks.js';
+import { mockCleanCardData } from '../../cleaners/mocks.js';
 
 
 describe('App', () => {
