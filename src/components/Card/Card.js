@@ -16,13 +16,14 @@ const Card = ({card, controlFunction}) => {
   let active = card.isActive ? 'active' : '';
 
   return (
-    <li className={'card ' + active} >
+    <li className={'card ' + active} 
+      onClick={() => controlFunction(card)}
+    >
       <h2 className='card-title'>{card.name}</h2>
       {newCardInfo}
       <button
         className='favorites-btn-card'
         name='favorites-card'
-        onClick={() => controlFunction(card)}
       >Favorite
       </button>
     </li>

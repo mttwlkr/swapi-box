@@ -9,12 +9,16 @@
   justify-content: space-between;
 }
 
-.card-title,
 .card-info {
-  margin: 2%;
+  margin: 0 5%;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 18px;
 }
 
 .card-title {
+  margin-top: 5%;
+  font-size: 35px;
+  font-family: 'Carrois Gothic', sans-serif;
   color:  #e6bc42;
   text-align: center;
 }
@@ -26,11 +30,6 @@
   font-size: 18px;
 }
 
-/*.card-header-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}*/
 
 .card-info {
   color: #e6bc42;

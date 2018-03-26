@@ -6,7 +6,9 @@
 }
 
 .button {
-  background: #e6bc42; /*#FEDA4A;*/
+  background: #e6bc42;
+  font-family: 'Carrois Gothic', sans-serif;
+  font-size: 20px;
   width: 15%;
   height: 40%;
   border: none;

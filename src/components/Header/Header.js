@@ -6,13 +6,17 @@ import PropTypes from 'prop-types';
 const Header = (props) => {
   return (
     <header className='header'>
-      <img src={logo} alt="Swapi Box" />
-      <div className='favorites-button-div'>
+      <div className='logo-div'>
+        <img src={logo} alt="Swapi Box" />
+      </div>
+      <div 
+      className='favorites-button-div'
+      onClick={props.controlFunction}
+      >
         <button
           className='favorites-button'
           name='favorites-nav'
-          onClick={props.controlFunction}
-        >Your Favorites
+        >Favorites
         </button>
         <span>{props.value.length}</span>
       </div>
