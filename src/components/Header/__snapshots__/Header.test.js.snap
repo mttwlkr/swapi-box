@@ -27,16 +27,20 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Swapi Box
-</h1>,
+        <img
+          alt="Swapi Box"
+          src="swapi-box-logo.png"
+/>,
         <div
           className="favorites-button-div"
 >
-          <Button
-                    controlFunction={[Function]}
+          <button
+                    className="favorites-button"
                     name="favorites-nav"
-          />
+                    onClick={[Function]}
+          >
+                    Your Favorites
+          </button>
           <span>
                     3
           </span>
@@ -51,11 +55,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Swapi Box",
+          "alt": "Swapi Box",
+          "src": "swapi-box-logo.png",
         },
         "ref": null,
-        "rendered": "Swapi Box",
-        "type": "h1",
+        "rendered": null,
+        "type": "img",
       },
       Object {
         "instance": null,
@@ -63,10 +68,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Button
-              controlFunction={[Function]}
+            <button
+              className="favorites-button"
               name="favorites-nav"
-/>,
+              onClick={[Function]}
+>
+              Your Favorites
+</button>,
             <span>
               3
 </span>,
@@ -78,14 +86,16 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "host",
             "props": Object {
-              "controlFunction": [Function],
+              "children": "Your Favorites",
+              "className": "favorites-button",
               "name": "favorites-nav",
+              "onClick": [Function],
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": "Your Favorites",
+            "type": "button",
           },
           Object {
             "instance": null,
@@ -111,16 +121,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Swapi Box
-</h1>,
+          <img
+            alt="Swapi Box"
+            src="swapi-box-logo.png"
+/>,
           <div
             className="favorites-button-div"
 >
-            <Button
-                        controlFunction={[Function]}
+            <button
+                        className="favorites-button"
                         name="favorites-nav"
-            />
+                        onClick={[Function]}
+            >
+                        Your Favorites
+            </button>
             <span>
                         3
             </span>
@@ -135,11 +149,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Swapi Box",
+            "alt": "Swapi Box",
+            "src": "swapi-box-logo.png",
           },
           "ref": null,
-          "rendered": "Swapi Box",
-          "type": "h1",
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,
@@ -147,10 +162,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <Button
-                controlFunction={[Function]}
+              <button
+                className="favorites-button"
                 name="favorites-nav"
-/>,
+                onClick={[Function]}
+>
+                Your Favorites
+</button>,
               <span>
                 3
 </span>,
@@ -162,14 +180,16 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "controlFunction": [Function],
+                "children": "Your Favorites",
+                "className": "favorites-button",
                 "name": "favorites-nav",
+                "onClick": [Function],
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": "Your Favorites",
+              "type": "button",
             },
             Object {
               "instance": null,

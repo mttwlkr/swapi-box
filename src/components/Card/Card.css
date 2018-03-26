@@ -3,34 +3,49 @@
   width: 250px;
   height: 400px;
   margin-top: 50px;
-  background: rgba(117, 67, 45, .8); /*#75432D; */
+  background: rgba(78, 78, 78, .6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title,
+.card-info {
+  margin: 2%;
 }
 
 .card-title {
-  color: #221C33;
+  color:  #e6bc42;
+  text-align: center;
 }
 
 .favorites-btn-card {
   background: #e6bc42;
   border: none;
+  height: 35px;
+  font-size: 18px;
 }
 
-.card-header-div {
+/*.card-header-div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
+}*/
 
 .card-info {
-  color: red;
+  color: #e6bc42;
 }
 
 .active {
-  background: #fff;
+  background: rgba(78, 78, 78, 1);
+  box-shadow: 0px 0px 20px #e6bc42;
 }
 
 
+/*font-family: 'Pathway Gothic One', sans-serif;*/
 /* #75432D; planets */
 /* #4F293A; */
 /*#C76832;*/
 /*#576f27*/
+/*#221C33;*/
+/* rgba(117, 67, 45, .8); #75432D; */

@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    card={
+        Object {
+            "model": "Digger Crawler",
+            "name": "Sand Crawler",
+            "passengers": "30",
+            "vehicle_class": "wheeled",
+          }
+    }
+    controlFunction={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="card-title"
+>
+          Sand Crawler
+</h2>,
+        Array [
+          <p
+            className="card-info model"
+>
+            <strong>
+                        model
+            </strong>
+             : 
+            Digger Crawler
+</p>,
+          <p
+            className="card-info passengers"
+>
+            <strong>
+                        passengers
+            </strong>
+             : 
+            30
+</p>,
+          <p
+            className="card-info vehicle_class"
+>
+            <strong>
+                        vehicle_class
+            </strong>
+             : 
+            wheeled
+</p>,
+        ],
+        <button
+          className="favorites-btn-card"
+          name="favorites-card"
+          onClick={[Function]}
+>
+          Favorite
+</button>,
+      ],
+      "className": "card ",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sand Crawler",
+          "className": "card-title",
+        },
+        "ref": null,
+        "rendered": "Sand Crawler",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <strong>
+              model
+</strong>,
+            " : ",
+            "Digger Crawler",
+          ],
+          "className": "card-info model",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "model",
+            },
+            "ref": null,
+            "rendered": "model",
+            "type": "strong",
+          },
+          " : ",
+          "Digger Crawler",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <strong>
+              passengers
+</strong>,
+            " : ",
+            "30",
+          ],
+          "className": "card-info passengers",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "passengers",
+            },
+            "ref": null,
+            "rendered": "passengers",
+            "type": "strong",
+          },
+          " : ",
+          "30",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <strong>
+              vehicle_class
+</strong>,
+            " : ",
+            "wheeled",
+          ],
+          "className": "card-info vehicle_class",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "vehicle_class",
+            },
+            "ref": null,
+            "rendered": "vehicle_class",
+            "type": "strong",
+          },
+          " : ",
+          "wheeled",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Favorite",
+          "className": "favorites-btn-card",
+          "name": "favorites-card",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Favorite",
+        "type": "button",
+      },
+    ],
+    "type": "li",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="card-title"
+>
+            Sand Crawler
+</h2>,
+          Array [
+            <p
+              className="card-info model"
+>
+              <strong>
+                            model
+              </strong>
+               : 
+              Digger Crawler
+</p>,
+            <p
+              className="card-info passengers"
+>
+              <strong>
+                            passengers
+              </strong>
+               : 
+              30
+</p>,
+            <p
+              className="card-info vehicle_class"
+>
+              <strong>
+                            vehicle_class
+              </strong>
+               : 
+              wheeled
+</p>,
+          ],
+          <button
+            className="favorites-btn-card"
+            name="favorites-card"
+            onClick={[Function]}
+>
+            Favorite
+</button>,
+        ],
+        "className": "card ",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sand Crawler",
+            "className": "card-title",
+          },
+          "ref": null,
+          "rendered": "Sand Crawler",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <strong>
+                model
+</strong>,
+              " : ",
+              "Digger Crawler",
+            ],
+            "className": "card-info model",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "model",
+              },
+              "ref": null,
+              "rendered": "model",
+              "type": "strong",
+            },
+            " : ",
+            "Digger Crawler",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <strong>
+                passengers
+</strong>,
+              " : ",
+              "30",
+            ],
+            "className": "card-info passengers",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "passengers",
+              },
+              "ref": null,
+              "rendered": "passengers",
+              "type": "strong",
+            },
+            " : ",
+            "30",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <strong>
+                vehicle_class
+</strong>,
+              " : ",
+              "wheeled",
+            ],
+            "className": "card-info vehicle_class",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "vehicle_class",
+              },
+              "ref": null,
+              "rendered": "vehicle_class",
+              "type": "strong",
+            },
+            " : ",
+            "wheeled",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Favorite",
+            "className": "favorites-btn-card",
+            "name": "favorites-card",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Favorite",
+          "type": "button",
+        },
+      ],
+      "type": "li",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

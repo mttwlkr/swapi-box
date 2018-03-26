@@ -1,11 +1,13 @@
+/* eslint-disable */
+
 // Component Mocks
 
 const mockCleanCardData = {
   name: 'Sand Crawler',
   model : 'Digger Crawler',
   passengers : '30',
-  vehicle_class : 'wheeled',
-}
+  vehicle_class : 'wheeled'
+};
 
 const mockCards = [
   {name: "Luke Skywalker", planetName: "Tatooine", population: "200000", species: "Human"},
@@ -321,6 +323,7 @@ const mockAPIPeopleData = {
 
 const mockCleanPeopleData = [
   {
+  "isActive": false,
   "name": "Luke Skywalker", 
   "planetName": undefined, 
   "population": undefined, 
@@ -443,24 +446,27 @@ const mockAPIPlanetData = {
 
 const mockCleanPlanetData = [
   {
+    "isActive": false,
     "climate": "temperate", 
     "name": "Alderaan", 
     "population": "2000000000", 
-    "residents": [undefined, undefined, undefined], 
+    "residents": ["undefined, ","undefined, ","undefined, "], 
     "terrain": "grasslands, mountains"
   },
   {
+    "isActive": false,
     "climate": "temperate, tropical", 
     "name": "Yavin IV", 
     "population": "1000", 
-    "residents": [], 
+    "residents": "No Residents", 
     "terrain": "jungle, rainforests"
   }, 
   {
+    "isActive": false,
     "climate": "frozen", 
     "name": "Hoth", 
     "population": "unknown", 
-    "residents": [], 
+    "residents": "No Residents", 
     "terrain": "tundra, ice caves, mountain ranges"
   }
 ]
@@ -526,8 +532,8 @@ const mockAPIVehicleData = {
 
 const mockCleanVehicleData = [
   {
-  "model": 
-  "Digger Crawler", 
+  "isActive": false,
+  "model": "Digger Crawler", 
   "name": "Sand Crawler", 
   "passengers": "30", 
   "vehicle_class": "wheeled"

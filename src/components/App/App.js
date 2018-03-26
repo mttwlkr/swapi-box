@@ -1,61 +1,62 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav.js';
 import Main from '../Main/Main.js';
-import Header from '../Header/Header.js'
-import {getAPI} from '../../cleaners/cleaner.js'
+import Header from '../Header/Header.js';
+import {getAPI} from '../../cleaners/cleaner.js';
 import './App.css';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       scroll: [],
       cards: [],
       favorites: []
-    }
+    };
   }
 
-  handleClick = (e) => {
-    switch (e.target.name) {
-      case 'vehicles': this.handleFetch('vehicles')
+  handleClick = (event) => {
+    switch (event.target.name) {
+    case 'vehicles': this.handleFetch('vehicles');
       break;
-      case 'people': this.handleFetch('people')
+    case 'people': this.handleFetch('people');
       break;
-      case 'planets': this.handleFetch('planets')
+    case 'planets': this.handleFetch('planets');
       break;
     }
   }
 
   showFavorites = () => {
     if (this.state.favorites.length === 0) {
-      alert('Please choose some favorites first!')
+      alert('Please choose some favorites first!');
     }
-    let currentFavorites = this.state.favorites
-    this.setState({cards: currentFavorites})
+    let currentFavorites = this.state.favorites;
+    this.setState({cards: currentFavorites});
   }
 
   handleFavorite = (card) => {
-    const names = this.state.favorites.map(fav => fav.name)
-    const idx = names.indexOf(card.name)
+    const names = this.state.favorites.map(fav => fav.name);
+    const idx = names.indexOf(card.name);
     if (this.state.favorites.length > 0 && idx !== -1 ) {
       card.isActive = false;
-      const newState = this.state.favorites.filter(fav => fav.name !== card.name)
-      this.setState({favorites: newState})
+      const newState = this.state.favorites
+        .filter(fav => fav.name !== card.name);
+      this.setState({favorites: newState});
     } else {
       card.isActive = true;
-      const newState = [...this.state.favorites, card]
-      this.setState({favorites: newState})      
+      const newState = [...this.state.favorites, card];
+      this.setState({favorites: newState});
     }   
   }
 
   handleFetch = async (type) => {
-    const response = await getAPI(type)
-    this.setState({cards: response})
+    const response = await getAPI(type);
+    this.setState({cards: response});
   }
 
   async componentDidMount() {
-    const response = await getAPI('films')
-    this.setState({scroll: response})
+    const response = await getAPI('films');
+    this.setState({scroll: response});
   }
 
   render() {

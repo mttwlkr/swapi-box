@@ -1,23 +1,13 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import App from './App.js';
 import { getAPI,
   parseFunc,
-  cleanOpeningScroll,
-  cleanPeople,
-  getHomeWorld,
-  getSpecies,
-  cleanPlanets,
-  getResidents,
-  cleanVehicles } from '../../cleaners/cleaner.js'
+  cleanVehicles } from '../../cleaners/cleaner.js';
 
-import {mockAPIFilmData, 
-  mockCleanCardData, 
-  mockCleanFilmData, 
+import {
   mockAPIVehicleData, 
-  mockCleanVehicleData,
-  mockAPIPeopleData,
-  mockCleanPeopleData } from '../../cleaners/mocks.js'
+  mockCleanCardData } from '../../cleaners/mocks.js';
 
 
 describe('App', () => {
@@ -25,56 +15,82 @@ describe('App', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />, {disableLifecycleMethods: true})
-  })
+    wrapper = shallow(<App />, {disableLifecycleMethods: true});
+  });
 
   it('should render without crashing', () => {
-    expect(wrapper).toBeDefined()
-  })
+    expect(wrapper).toBeDefined();
+  });
 
-  it.skip('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  it.skip('should invoke the handleFetch method with different arguments', async () => {
-    const mockEvent = {target: {name: 'vehicles'}}
-    const handleFetch = jest.spyOn(wrapper.instance(), 'handleFetch')
-    wrapper.instance().handleClick(mockEvent)
-    expect(handleFetch).toHaveBeenCalled()
-  })
-
-  it('should update the cards array with the favorite cards if favorites card array has length', () => {
-    expect(wrapper.state('cards').length).toEqual(0)
-    wrapper.setState({favorites: [mockCleanCardData]})
-    wrapper.instance().showFavorites()
-    expect(wrapper.state('cards').length).toEqual(1)
-  })
+  it('should update cards state if favorite cards length', () => {
+    expect(wrapper.state('cards').length).toEqual(0);
+    wrapper.setState({favorites: [mockCleanCardData]});
+    wrapper.instance().showFavorites();
+    expect(wrapper.state('cards').length).toEqual(1);
+  });
 
   it('should add a favorited card to favorites state array', () => {
-    expect(wrapper.state('favorites').length).toEqual(0)
-    wrapper.instance().handleFavorite(mockCleanCardData)
-    expect(wrapper.state('favorites').length).toEqual(1)
+    expect(wrapper.state('favorites').length).toEqual(0);
+    wrapper.instance().handleFavorite(mockCleanCardData);
+    expect(wrapper.state('favorites').length).toEqual(1);
+  });
+
+  it('should not add duplicate card to favorites state', () => {
+    expect(wrapper.state('favorites').length).toEqual(0);
+    wrapper.setState({favorites: [mockCleanCardData]});
+    wrapper.instance().handleFavorite(mockCleanCardData);
+    expect(wrapper.state('favorites').length).toEqual(0);
+  });
+
+  it('should change the isActive prop of card to true if not in state', () => {
+    expect(mockCleanCardData.isActive).toEqual(false);
+    wrapper.instance().handleFavorite(mockCleanCardData);
+    expect(mockCleanCardData.isActive).toEqual(true);
   })
 
-  it('should not add a card to favorites state array if that card is already in array', () => {
-    expect(wrapper.state('favorites').length).toEqual(0)
-    wrapper.setState({favorites: [mockCleanCardData]})
-    wrapper.instance().handleFavorite(mockCleanCardData)
-    expect(wrapper.state('favorites').length).toEqual(0)
+  it('should send an alert if favorites array is empty', () => {
+    wrapper.setState({favorites: []});
+    window.alert = jest.fn();
+    wrapper.instance().showFavorites()
+    expect(window.alert).toHaveBeenCalled()
   })
 
-  it.skip('should set cards in state when handleFetch is invoked', async () => {
-    expect(wrapper.state('cards').length).toEqual(0)
-    wrapper.instance().handleFetch('vehicles')
+  it('should set card state to favorites if favorites array has length', () => {
+    wrapper.setState({favorites: [mockCleanCardData]});
+    wrapper.instance().showFavorites()
+    expect(wrapper.state('cards').length).toEqual(1)
+  })  
+
+  it('should change the isActive prop of card to false if its in state', () => {
+    wrapper.setState({favorites: [mockCleanCardData]});
+    expect(mockCleanCardData.isActive).toEqual(true);
+    wrapper.instance().handleFavorite(mockCleanCardData);
+    expect(mockCleanCardData.isActive).toEqual(false);
+  })
+
+  it.skip('should invoke the handleFetch method', async () => {
+    const mockEvent = {target: {name: 'vehicles'}};
+    const handleFetch = jest.spyOn(wrapper.instance(), 'handleFetch');
+    wrapper.instance().handleClick(mockEvent);
+    expect(handleFetch).toHaveBeenCalled();
+  });
+
+  it.skip('should set cards state when handleFetch is invoked', async () => {
+    expect(wrapper.state('cards').length).toEqual(0);
+    wrapper.instance().handleFetch('vehicles');
     window.fetch = jest.fn().mockImplementation( () => ({
-        status: 200,
-        json: () => new Promise((resolve, reject) => {
-          resolve({
-            mockAPIVehicleData
-          })
-        })
-      }))
-    const answer = await cleanVehicles(mockAPIVehicleData)
-    expect(wrapper.state('cards').length).toEqual(10)
-  }) 
-})
+      status: 200,
+      json: () => new Promise((resolve) => {
+        resolve({
+          mockAPIVehicleData
+        });
+      })
+    }));
+    await cleanVehicles(mockAPIVehicleData);
+    expect(wrapper.state('cards').length).toEqual(10);
+  });
+});

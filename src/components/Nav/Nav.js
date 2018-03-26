@@ -1,5 +1,6 @@
-import React from 'react'
-import './Nav.css'
+import React from 'react';
+import './Nav.css';
+import PropTypes from 'prop-types';
 
 const Nav = (props) => {
   return (
@@ -23,7 +24,11 @@ const Nav = (props) => {
         Vehicles
       </button>
     </nav>
-  )
-}
+  );
+};
+
+Nav.propTypes = {
+  controlFunction: PropTypes.func
+};
 
 export default Nav;

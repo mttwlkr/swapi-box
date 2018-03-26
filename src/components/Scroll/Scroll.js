@@ -1,8 +1,14 @@
-import React from 'react'
-import './Scroll.css'
+import React from 'react';
+import './Scroll.css';
+import PropTypes from 'prop-types';
 
 const Scroll = ({scroll}) => {
-  const {title, text, date} = scroll
+  const {title, text, date} = scroll;
+
+  setTimeout(() => {
+    
+  }, 30000);
+
   return (
     <div className='fade'>
       <section className='star-wars'>  
@@ -15,7 +21,11 @@ const Scroll = ({scroll}) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Scroll
+Scroll.propTypes = {
+  scroll: PropTypes.object
+};
+
+export default Scroll;
