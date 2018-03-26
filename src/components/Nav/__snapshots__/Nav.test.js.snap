@@ -21,21 +21,21 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
-          className="nav-button people-button"
+          className="button people-button"
           name="people"
           onClick={[Function]}
 >
           People
 </button>,
         <button
-          className="nav-button planets-button"
+          className="button planets-button"
           name="planets"
           onClick={[Function]}
 >
           Planets
 </button>,
         <button
-          className="nav-button vehicles-button"
+          className="button vehicles-button"
           name="vehicles"
           onClick={[Function]}
 >
@@ -52,7 +52,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "People",
-          "className": "nav-button people-button",
+          "className": "button people-button",
           "name": "people",
           "onClick": [Function],
         },
@@ -66,7 +66,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Planets",
-          "className": "nav-button planets-button",
+          "className": "button planets-button",
           "name": "planets",
           "onClick": [Function],
         },
@@ -80,7 +80,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Vehicles",
-          "className": "nav-button vehicles-button",
+          "className": "button vehicles-button",
           "name": "vehicles",
           "onClick": [Function],
         },
@@ -99,21 +99,21 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
-            className="nav-button people-button"
+            className="button people-button"
             name="people"
             onClick={[Function]}
 >
             People
 </button>,
           <button
-            className="nav-button planets-button"
+            className="button planets-button"
             name="planets"
             onClick={[Function]}
 >
             Planets
 </button>,
           <button
-            className="nav-button vehicles-button"
+            className="button vehicles-button"
             name="vehicles"
             onClick={[Function]}
 >
@@ -130,7 +130,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "People",
-            "className": "nav-button people-button",
+            "className": "button people-button",
             "name": "people",
             "onClick": [Function],
           },
@@ -144,7 +144,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Planets",
-            "className": "nav-button planets-button",
+            "className": "button planets-button",
             "name": "planets",
             "onClick": [Function],
           },
@@ -158,7 +158,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Vehicles",
-            "className": "nav-button vehicles-button",
+            "className": "button vehicles-button",
             "name": "vehicles",
             "onClick": [Function],
           },

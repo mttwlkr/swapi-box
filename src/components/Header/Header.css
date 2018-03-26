@@ -1,9 +1,39 @@
 .header {
-  border: 1px solid chartreuse;
-  background-color: grey;
-  color: coral;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  flex-direction: row;
 }
 
 .favorites-button-div {
-  border: 1px solid chartreuse;
+  font-family: 'Carrois Gothic', sans-serif;
+  background-color: #E5BC41;
+  width: 13.5%;
+  display: flex;
+  align-items: center;
+  height: 63%;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3%;
 }
+
+.favorites-button {
+  font-size: 16px;
+  background: #e6bc42;
+  border: none;
+}
+
+.logo-div {
+  display: flex;
+}
+
+span {
+  font-size: 22px;
+}
+
+img {
+  width: 100%;
+}
+
+
