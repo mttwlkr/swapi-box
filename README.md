@@ -22,7 +22,7 @@
 [Matt Walker](https://github.com/mttwlkr/swapi-box)
 
 ## Screenshots
-[Opening Scroll](https://user-images.githubusercontent.com/30199861/37889321-efb024a2-3088-11e8-89f2-07c3d50fe96b.png)
-[Cards](https://user-images.githubusercontent.com/30199861/37889327-f1e0dbf4-3088-11e8-858d-25d4b589ac23.png)
-[Favorites](https://user-images.githubusercontent.com/30199861/37889331-f3d36f1c-3088-11e8-9a43-95b6064a0f75.png)
+![Opening Scroll](https://user-images.githubusercontent.com/30199861/37889321-efb024a2-3088-11e8-89f2-07c3d50fe96b.png)
+![Cards](https://user-images.githubusercontent.com/30199861/37889327-f1e0dbf4-3088-11e8-858d-25d4b589ac23.png)
+![Favorites](https://user-images.githubusercontent.com/30199861/37889331-f3d36f1c-3088-11e8-9a43-95b6064a0f75.png)
 
