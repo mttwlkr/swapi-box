@@ -35,5 +35,5 @@ Card.propTypes = {
   controlFunction: PropTypes.func
 };
 
-export default Card ;
+export default Card;
 
