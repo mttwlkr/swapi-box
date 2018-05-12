@@ -1,25 +1,25 @@
 # Star Wars API (SWAPI) Box - A Turing Mod 3 FEE Project
 ## Synopsis
-#### This project fetches data from the Star Wars API (SWAPI) and displays the information. Users view an opening scroll from one of seven Star Wars movies then can select people, planets and vehicles from the movie franchise. The fetch calls are done using Async Await and Promises.
+###### This project fetches data from the Star Wars API (SWAPI) and displays the information. Users view an opening scroll from one of seven Star Wars movies then can select people, planets and vehicles from the movie franchise. The fetch calls are done using Async Await and Promises.
 
 ## Set Up
-#### Clone the repo
+###### Clone the repo
 
-#### Run ```npm install``` from the root directory
+###### Run ```npm install``` from the root directory
 
-#### Run ```npm start``` and visit ```localhost:3000``` in your browser
+###### Run ```npm start``` and visit ```localhost:3000``` in your browser
 
 ## Test Driven Development
 
-#### SWAPI Box uses Jest with Enzyme for testing
+###### SWAPI Box uses Jest with Enzyme for testing
 
-#### Run ```npm test``` to run the test suite
+###### Run ```npm test``` to run the test suite
 
 ## Project Goals
-#### Create modular, reusable React components.
-#### Minimize use of stateful components.
-#### Use propTypes to validate props.
-#### Become comfortable using Async Await and use Promises.
+###### Create modular, reusable React components.
+###### Minimize use of stateful components.
+###### Use propTypes to validate props.
+###### Become comfortable using Async Await and use Promises.
 
 ## Contributor
 [Matt Walker](https://github.com/mttwlkr/swapi-box)
