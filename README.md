@@ -3,7 +3,9 @@
 ###### This project fetches data from the Star Wars API (SWAPI) and displays the information. Users view an opening scroll from one of seven Star Wars movies then can select people, planets and vehicles from the movie franchise. The fetch calls are done using Async Await and Promises.
 
 ## Set Up
-###### Clone the repo
+#### Clone the repo
+
+###### ```git clone https://github.com/mttwlkr/swapi-box.git```
 
 ###### Run ```npm install``` from the root directory
 
