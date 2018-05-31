@@ -20,8 +20,8 @@
 ## Project Goals
 * Create modular, reusable React components.
 * Minimize use of stateful components.
-* Use propTypes to validate props.
-* Become comfortable using Async Await and use Promises.
+* Become comfortable using Async Await and using Promises.
+* Become comfortable testing Asynchronous Javascript. 
 
 ## Contributor
 [Matt Walker](https://github.com/mttwlkr/swapi-box)
